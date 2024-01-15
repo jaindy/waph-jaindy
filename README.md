@@ -10,6 +10,7 @@
 
 **Short-bio**: Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. 
 
+![Divyani Headshot!](/Images/Divyani_Jain.jpg)
 
 ## Repository Information
 
