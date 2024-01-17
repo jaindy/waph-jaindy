@@ -22,6 +22,8 @@ This is a private repository for divyani Jain to store all code from the course.
 
 ## The lab's overview
 
+In this Lab0, we have nstalled Virtual machine and created a private git repository which has shared with instructor. Also, we learned GIT operation such as git pull, add, commit and push the chnages. In the main README.md file we have updated instructor and student detail and provided path to Lab0 assignment. We have also created another folder under labs/lab0/README.md. This file has all the information covered in lecture 1 and lecture 2 along with screenshot. 
+.
 Lab0 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab0](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab0).
 
 ## Part I - Ubuntu Virtual Machine & Software Installation
