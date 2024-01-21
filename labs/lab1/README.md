@@ -22,9 +22,9 @@ This is a private repository for divyani Jain to store all code from the course.
 
 ## The lab's overview
 
-Overview of the lab:
+The goal of Lab 1 is to use Wireshark and telnet to study the HTTP protocol. We set up the most widely used network protocol analyzer in the world, Wireshark, to examine real-time HTTP traffic, record packet data, and monitor network traffic. Application layer protocols like HTTP are used to move files from web servers to web browsers. Explored the telnet client/server protocol for interacting with a distant server. Understand the common gateway interface protocol, which is used to run console programs to communicate with external applications. Installed and explored the PHP programming language, which is used specifically for server-side web development.
 
-Lab1 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1](hhttps://github.com/jaindy/waph-jaindy/tree/main/labs/lab1).
+Lab1 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1).
 
 
 ## Part I - The Web and HTTP Protocol
