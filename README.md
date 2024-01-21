@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# waph-jaindy hello
-=======
 # WAPH-jaindy Web Application Programming and Hacking
 
 ## Instructor: Dr. Phu Phung
