@@ -10,7 +10,7 @@
 
 **Short-bio**: Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. 
 
-![Divyani Headshot!](/Images/Divyani_Jain.jpg)
+![Divyani Headshot!](Images/Divyani_Jain.jpg)
 
 ## Repository Information
 
@@ -53,27 +53,27 @@ Below are the commands used to install softwares.
 
 Apache Web Server is running properly in google chrome.
 
-![Apache2](/Images/Apache2.png)
+![Apache2](Images/Apache2.png)
 
-![IPAddress](/Images/IPaddress.png)
+![IPAddress](Images/IPaddress.png)
 
 
 ## Part II - git Repositories and Exercises
 
 Installed Git and modified the README.md file and perform git operation such as git pull, git add, git commit and push.
 
-![GitInstall](/Images/GitInstall.png)
+![GitInstall](Images/GitInstall.png)
 
-![Modify Readme](/Images/Setup.png)
+![Modify Readme](Images/Setup.png)
 
-![Update Readme](/Images/UpdateReadme.png)
+![Update Readme](Images/UpdateReadme.png)
 
 
 ## The course repository
 
 Cloned the course repository into the home directory:
 
-![Gitclone](/Images/GitClone.png)
+![Gitclone](Images/GitClone.png)
 
 ### Private Repository
 
@@ -83,18 +83,18 @@ Below are the steps perfomed to create Private Repository.
 1. Open chrome and create a new account in GIT with your university email and create a private repository.
 2. Share private repository with your instructor.
 
-![PrivateRepository](/Images/RepositoryAccess.png)
+![PrivateRepository](Images/RepositoryAccess.png)
 
 Generated SSH key and added in github.
 
-![SShKey](/Images/SSHKey.png)
+![SShKey](Images/SSHKey.png)
 
-![SSH key generate](/Images/KeyGenerate.png)
+![SSH key generate](Images/KeyGenerate.png)
 
-![add ssh key](/Images/SSHkeysetup.png)
+![add ssh key](Images/SSHkeysetup.png)
 
-![Private Repository](/Images/GitCloneSSH.png)
+![Private Repository](Images/GitCloneSSH.png)
 
-![Update Readme](/Images/README_1.png)
+![Update Readme](Images/README_1.png)
 
-![Update Readme](/Images/README_2.png)
+![Update Readme](Images/README_2.png)
