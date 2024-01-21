@@ -30,6 +30,32 @@ Lab1 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1](ht
 ## Part I - The Web and HTTP Protocol
 
 ### Task 1. Familiar with the Wireshark tool and HTTP protocol
+Wireshark is a network protocol analyzer that captures HTTP request and response from a network connection.
+1. Installed Wireshark using $ sudo apt install wireshark-qt
+  
+![Wireshark Installation!](/Images/WiresharkInstallation.png)
+
+2. After installation verify the version using $ wireshark --version and run the applicaton using $ sudo wireshark &.
+
+![Wireshark Version!](/Images/WiresharkVersion.png)
+
+3. After running the Wireshark application select the interface type "any" and click on start button.
+
+![Wireshark Interface!](/Images/WiresharkInterface.png)
+
+4. Select the first icon to start the live traffic.
+5. Open google chrome and hit https://example.com.
+6. Once the website loaded, go back to wirestark tool and stop the live traffice.
+7. To check only HTTP request and response data, apply filter as "http" in wireshark tool.
+   
+8. Click on the GET /index.html to check the HTTP Request message and similarly verify the HTTP response message.
+
+![HTTP Request!](/Images/HTTPRequest.png)
+![HTTP Response!](/Images/HTTPResponse.png)
+
+9. To check message sent and receive section, right click on packet and select follow-> HTTP stream.
+
+![HTTP Stream!](/Images/HTTPStream.png)
 
 
 ### Task 2. Understanding HTTP using telnet and Wireshark
