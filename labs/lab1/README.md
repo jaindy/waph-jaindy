@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# waph-jaindy hello
-=======
 # WAPH-jaindy Web Application Programming and Hacking
 
 ## Instructor: Dr. Phu Phung
@@ -21,12 +18,29 @@ Respository's URL: [https://github.com/jaindy/waph-jaindy.git](https://github.co
 
 This is a private repository for divyani Jain to store all code from the course. The organization of this repository is as follows.
 
-### Labs 
+# Lab 1 - Foundations of the Web 
 
-[Hands-on exercises in lectures](https://github.com/jaindy/waph-jaindy/tree/main/labs)
+## The lab's overview
 
-  - [Lab0](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab0): Development Environment Setup 
-  - [Lab1](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1): Foundation of the Web 
+Overview of the lab:
+
+Lab1 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1](hhttps://github.com/jaindy/waph-jaindy/tree/main/labs/lab1).
 
 
->>>>>>> 4687be119c4bf43c8d6b7c73da0d693520fd644c
+## Part I - The Web and HTTP Protocol
+
+### Task 1. Familiar with the Wireshark tool and HTTP protocol
+
+
+### Task 2. Understanding HTTP using telnet and Wireshark
+
+
+## Part II - Basic Web Application Programming
+
+### Task 1: Build CGI Web applications in C
+
+ 
+### Task 2: A simple PHP Web Application with user input
+
+### Task 3: Understanding HTTP GET and POST requests
+
