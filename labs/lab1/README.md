@@ -107,5 +107,12 @@ Common gateway interface is a standard protocol that communicate web servers wit
  
 ### Task 2: A simple PHP Web Application with user input
 
+Personal Home Page is a scripting language used to develop server-side web applications. PHP programs are written in PHP with HTML. These programs are executed by interpreter inside webserver. It is open source and support MYSQL database.
+Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
+
+1. Create a new php file inside lab1 folder.
+2. Write code to print thespring in browser.
+3. Deploy the code to the webserver Root directory using command-> $ sudo cp helloworld.php /var/www/html
+
 ### Task 3: Understanding HTTP GET and POST requests
 
