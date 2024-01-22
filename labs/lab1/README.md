@@ -63,12 +63,14 @@ Wireshark is a network protocol analyzer that captures HTTP request and response
 Telnet is a network protocol that provide a command line interface for communication with server.
 
 1. Start the wireshark network analyzer tool.
-2. Send a HTTP request from terminal using command telnet example.com 80 and press enter.
+2. Established a connection to port 80 on a serve using command telnet example.com 80.
+3. Send a HTTP request from terminal and press enter. The very first line is called the start-line of the HTTP request where GET is a method and 1.0 is a HTTP version. Next line is a header which tells send host to specific server example.com.
+   
 Type below command->
 GET / HTTP/1.0
 Host: example.com
 
-4. Press enter key and look for success response in terminal.
+Press enter key and look for success response in terminal. There are 3 parts to a response start-line which says status is Ok, headers then the body which is json format. 
 
 ![Telnet HTTP Request/Response!](/Images/TelnetRequest.png)
 
