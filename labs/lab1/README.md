@@ -127,8 +127,14 @@ Personal Home Page is a scripting language used to develop server-side web appli
 Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 1. Create a new php file inside lab1 folder.
-2. Write code to print thespring in browser.
+2. Write code to print the string in the browser.
+
+![PHP code](/Images/PHPCode.png)
+
 3. Deploy the code to the webserver Root directory using command-> $ sudo cp helloworld.php /var/www/html
+
+![PHP code](/Images/FirstPHP.png)
+
 
 ### Task 3: Understanding HTTP GET and POST requests
 
