@@ -94,16 +94,48 @@ Press enter key and look for success response in terminal. There are 3 parts to 
 Common gateway interface is a standard protocol that communicate web servers with external applications by executing console programs. It can be written in any programming lanuage that can be executed by server. First CGI application was developed in C.
 
 1. Create a new file helloworld.c and write code to print helloworld in browser.
+
+Code:
+
+#include <stdio.h>
+int main(void) {
+printf("Content-Type: text/plain; charset=utf-8\n\n");
+printf("Hello World CGI! From jaindy, WAPH\n\n");
+}
+
 2. Install GCC compliler and run GCC command to run the helloworld program.
 3. Need to enable CGI for apache2 on Ubuntu ($ sudo a2enmod cgid) and then restart apache server ($ sudo systemctl restart apache2).
 4. To deploy the CGI programs place the copy of your pragram file in path-> /usr/lib/cgi-bin
 
+![CGI Helloworld application!](/Images/FirstCGIApp.png)
+
 
 ### Part b. Build CGI application to pring HTML content
+
 1. Created Index.c file in lab1 folder.
 2. Write HTML code that has title, body and paragraph and print instuctor, student details.
+
+Code:
+#include <stdio.h>
+int main(void) {
+printf("Content-Type: text/html; charset=utf-8\n\n");
+printf("<!DOCTYPE html>\n\n");
+printf("<html>");
+printf("<head>");
+printf("<title>CGI application with html</title>\n\n");
+printf("</head>");
+printf("<body>");
+printf("<h1>CGI application with html</h1>");
+printf("<p>Instructor name: Phu phung</p>\n\n");
+printf("<p>Student name: Jaindy</p>\n\n");
+printf("</body>");
+printf("</html>");
+
+}
+
 3. Complile and deploy the code to see output in browser.
    
+![CGI with HTML application!](/Images/CGIwithHTML.png)
  
 ### Task 2: A simple PHP Web Application with user input
 
