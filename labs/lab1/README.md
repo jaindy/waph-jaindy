@@ -89,8 +89,21 @@ Press enter key and look for success response in terminal. There are 3 parts to 
 
 ## Part II - Basic Web Application Programming
 
-### Task 1: Build CGI Web applications in C
+### Task 1: Part a. Build CGI Web applications in C
 
+Common gateway interface is a standard protocol that communicate web servers with external applications by executing console programs. It can be written in any programming lanuage that can be executed by server. First CGI application was developed in C.
+
+1. Create a new file helloworld.c and write code to print helloworld in browser.
+2. Install GCC compliler and run GCC command to run the helloworld program.
+3. Need to enable CGI for apache2 on Ubuntu ($ sudo a2enmod cgid) and then restart apache server ($ sudo systemctl restart apache2).
+4. To deploy the CGI programs place the copy of your pragram file in path-> /usr/lib/cgi-bin
+
+
+### Part b. Build CGI application to pring HTML content
+1. Created Index.c file in lab1 folder.
+2. Write HTML code that has title, body and paragraph and print instuctor, student details.
+3. Complile and deploy the code to see output in browser.
+   
  
 ### Task 2: A simple PHP Web Application with user input
 
