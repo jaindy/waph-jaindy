@@ -60,6 +60,29 @@ Wireshark is a network protocol analyzer that captures HTTP request and response
 
 ### Task 2. Understanding HTTP using telnet and Wireshark
 
+Telnet is a network protocol that provide a command line interface for communication with server.
+
+1. Start the wireshark network analyzer tool.
+2. Send a HTTP request from terminal using command telnet example.com 80.
+GET / HTTP/1.0
+Host: example.com
+
+3. Press enter key and look for success response in terminal.
+
+![Telnet HTTP Request/Response!](/Images/TelnetRequest.png)
+
+4. Stop the wireshark tool and look for http request and response.c
+
+![Telnet Wireshark HTTP Request!](/Images/TelnetWiresharkHttpReq.png)
+
+![Telnet Wireshark HTTP Response!](/Images/TelnetWiresharkHttpRes.png)
+
+
+5. Check the HTTP stream message in wireshark tool.
+ 
+![Telnet Wireshark HTTP Stream!](/Images/TelnetWiresharkHTTPstream.png)
+ 
+
 
 ## Part II - Basic Web Application Programming
 
