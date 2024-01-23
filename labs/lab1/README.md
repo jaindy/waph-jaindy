@@ -141,3 +141,6 @@ Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 ## Part b. Using curl sending post request.
 
+![Wireshark Curl post](/Images/Curlpost.png)
+
+
