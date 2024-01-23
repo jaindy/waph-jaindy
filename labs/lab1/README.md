@@ -165,4 +165,8 @@ Using $_REQUEST is not secure because requested data is visible in URL. To send 
  
 ![Wireshark Curl post](/Images/Curlpost.png)
 
+### Part c. Similarity/difference between HTTP POST Request and HTTP GET Request
+
+When sending data, the GET method adds the data to the URL. When sending data from Post request input data is not visible in URL.
+Only required headers are visible in http stream when sending data through post request. Curl provide more security from hacking.
 
