@@ -133,3 +133,11 @@ Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 ### Task 3: Understanding HTTP GET and POST requests
 
+## Part a. Examine HTTP Get and POST data in wireshark for echo.php.
+
+![Wireshark GET](/Images/GetData.png)
+![Wireshark POST](/Images/PostData.png)
+![Wireshark Stream](/Images/StreamData.png)
+
+## Part b. Using curl sending post request.
+
