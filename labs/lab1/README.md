@@ -95,14 +95,6 @@ Common gateway interface is a standard protocol that communicate web servers wit
 
 1. Create a new file helloworld.c and write code to print helloworld in browser.
 
-Code:
-
-#include <stdio.h>
-int main(void) {
-printf("Content-Type: text/plain; charset=utf-8\n\n");
-printf("Hello World CGI! From jaindy, WAPH\n\n");
-}
-
 2. Install GCC compliler and run GCC command to run the helloworld program.
 3. Need to enable CGI for apache2 on Ubuntu ($ sudo a2enmod cgid) and then restart apache server ($ sudo systemctl restart apache2).
 4. To deploy the CGI programs place the copy of your pragram file in path-> /usr/lib/cgi-bin
@@ -133,8 +125,11 @@ Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 3. Deploy the code to the webserver Root directory using command-> $ sudo cp helloworld.php /var/www/html
 
-![PHP code](/Images/FirstPHP.png)
+![PHP Application](/Images/FirstPHP.png)
 
+4. Created new echo.php file to read request data.
+
+![PHP echo application](/Images/EchoApp.png)
 
 ### Task 3: Understanding HTTP GET and POST requests
 
