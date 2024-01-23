@@ -114,7 +114,7 @@ Common gateway interface is a standard protocol that communicate web servers wit
 ![CGI with HTML application!](/Images/CGIwithHTML.png)
  
 ### Task 2: A simple PHP Web Application with user input
-
+### part a.
 Personal Home Page is a scripting language used to develop server-side web applications. PHP programs are written in PHP with HTML. These programs are executed by interpreter inside webserver. It is open source and support MYSQL database.
 Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
@@ -127,19 +127,28 @@ Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 ![PHP Application](/Images/FirstPHP.png)
 
-4. Created new echo.php file to read request data.
+### part b. 
+
+Created new echo.php file to read request data. Using $_REQUEST is not secure because requested data is visible in URL.
 
 ![PHP echo application](/Images/EchoApp.png)
 
 ### Task 3: Understanding HTTP GET and POST requests
 
-## Part a. Examine HTTP Get and POST data in wireshark for echo.php.
+### Part a. Examine HTTP Get and POST data in wireshark for echo.php.
 
+Below steps are follow to check Get and Post data in wireshark. 
+1. Deploy and run the echo.php file in apache server.
+2. Start the wireshark to capture the request and response.
+3. Check the output in google chrome using http://localhost/echo.php.
+4. Stop the wireshark tool.
+5. Look for http data.
+    
 ![Wireshark GET](/Images/GetData.png)
 ![Wireshark POST](/Images/PostData.png)
 ![Wireshark Stream](/Images/StreamData.png)
 
-## Part b. Using curl sending post request.
+### Part b. Using curl sending post request.
 
 Using $_REQUEST is not secure because requested data is visible in URL. To send input request with http post, We will use curl command and send data from terminal.
  
