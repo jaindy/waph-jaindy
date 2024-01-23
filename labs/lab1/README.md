@@ -146,3 +146,4 @@ Using $_REQUEST is not secure because requested data is visible in URL. To send 
 ![Wireshark Curl post](/Images/Curlpost.png)
 
 
+## Part c. Comparision between HTTP GET and Post request/response
