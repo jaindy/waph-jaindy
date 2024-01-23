@@ -125,7 +125,7 @@ Common gateway interface is a standard protocol that communicate web servers wit
 ![CGI with HTML application!](/Images/CGIwithHTML.png)
  
 ### Task 2: A simple PHP Web Application with user input
-### part a.
+### Part a.
 Personal Home Page is a scripting language used to develop server-side web applications. PHP programs are written in PHP with HTML. These programs are executed by interpreter inside webserver. It is open source and support MYSQL database.
 Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
@@ -138,7 +138,7 @@ Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 ![PHP Application](/Images/FirstPHP.png)
 
-### part b. 
+### Part b. 
 
 Created new echo.php file to read request data. Using $_REQUEST is not secure because requested data is visible in URL.
 
