@@ -141,6 +141,8 @@ Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 ## Part b. Using curl sending post request.
 
+Using $_REQUEST is not secure because requested data is visible in URL. To send input request with http post, We will use curl command and send data from terminal.
+ 
 ![Wireshark Curl post](/Images/Curlpost.png)
 
 
