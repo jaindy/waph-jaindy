@@ -70,22 +70,33 @@ Type below command->
 GET / HTTP/1.0
 Host: example.com
 
-Press enter key and look for success response in terminal. There are 3 parts to a response start-line which says status is Ok, headers then the body which is json format. 
+Press enter key and look for success response in terminal. There are 3 parts to a response start-line which says status is Ok, headers then the body which is html data format. 
+
+4. Stop the wireshark tool and look for http request and response.
+   
+### Part a. Terminal showing HTTP request and response.
 
 ![Telnet HTTP Request/Response!](/Images/TelnetRequest.png)
 
-4. Stop the wireshark tool and look for http request and response.
+
+### Part b. Based on compariosn between HTTP request in telnet and in browser in task 1.
+
+Telnet request contains status line and one header Host field. Browser request contains status line and multiple header fields. 
 
 ![Telnet Wireshark HTTP Request!](/Images/TelnetWiresharkHttpreq.png)
+
+
+### Part c. Based on compariosn between HTTP response in telnet and in browser in task 1.
+
+Telnet response contain html data in body and have additional header field like connection close. In browser, body part is missing.
 
 ![Telnet Wireshark HTTP Response!](/Images/TelnetWiresharkHttpRes.png)
 
 
-5. Check the HTTP stream message in wireshark tool.
+Check the HTTP stream message in wireshark tool.
  
 ![Telnet Wireshark HTTP Stream!](/Images/TelnetWiresharkHTTPstream.png)
  
-
 
 ## Part II - Basic Web Application Programming
 
