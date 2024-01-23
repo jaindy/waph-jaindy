@@ -70,22 +70,33 @@ Type below command->
 GET / HTTP/1.0
 Host: example.com
 
-Press enter key and look for success response in terminal. There are 3 parts to a response start-line which says status is Ok, headers then the body which is json format. 
+Press enter key and look for success response in terminal. There are 3 parts to a response start-line which says status is Ok, headers then the body which is html data format. 
+
+4. Stop the wireshark tool and look for http request and response.
+   
+### Part a. Terminal showing HTTP request and response.
 
 ![Telnet HTTP Request/Response!](/Images/TelnetRequest.png)
 
-4. Stop the wireshark tool and look for http request and response.
+
+### Part b. Based on compariosn between HTTP request in telnet and in browser in task 1.
+
+Telnet request contains status line and one header Host field. Browser request contains status line and multiple header fields. 
 
 ![Telnet Wireshark HTTP Request!](/Images/TelnetWiresharkHttpreq.png)
+
+
+### Part c. Based on compariosn between HTTP response in telnet and in browser in task 1.
+
+Telnet response contain html data in body and have additional header field like connection close. In browser, body part is missing.
 
 ![Telnet Wireshark HTTP Response!](/Images/TelnetWiresharkHttpRes.png)
 
 
-5. Check the HTTP stream message in wireshark tool.
+Check the HTTP stream message in wireshark tool.
  
 ![Telnet Wireshark HTTP Stream!](/Images/TelnetWiresharkHTTPstream.png)
  
-
 
 ## Part II - Basic Web Application Programming
 
@@ -114,7 +125,7 @@ Common gateway interface is a standard protocol that communicate web servers wit
 ![CGI with HTML application!](/Images/CGIwithHTML.png)
  
 ### Task 2: A simple PHP Web Application with user input
-
+### Part a.
 Personal Home Page is a scripting language used to develop server-side web applications. PHP programs are written in PHP with HTML. These programs are executed by interpreter inside webserver. It is open source and support MYSQL database.
 Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
@@ -127,23 +138,35 @@ Install PHP using command $ sudo apt-get install php libapache2-mod-php -y
 
 ![PHP Application](/Images/FirstPHP.png)
 
-4. Created new echo.php file to read request data.
+### Part b. 
+
+Created new echo.php file to read request data. Using $_REQUEST is not secure because requested data is visible in URL.
 
 ![PHP echo application](/Images/EchoApp.png)
 
 ### Task 3: Understanding HTTP GET and POST requests
 
-## Part a. Examine HTTP Get and POST data in wireshark for echo.php.
+### Part a. Examine HTTP Get and POST data in wireshark for echo.php.
 
+Below steps are follow to check Get and Post data in wireshark. 
+1. Deploy and run the echo.php file in apache server.
+2. Start the wireshark to capture the request and response.
+3. Check the output in google chrome using http://localhost/echo.php.
+4. Stop the wireshark tool.
+5. Look for http data.
+    
 ![Wireshark GET](/Images/GetData.png)
 ![Wireshark POST](/Images/PostData.png)
 ![Wireshark Stream](/Images/StreamData.png)
 
-## Part b. Using curl sending post request.
+### Part b. Using curl sending post request.
 
 Using $_REQUEST is not secure because requested data is visible in URL. To send input request with http post, We will use curl command and send data from terminal.
  
 ![Wireshark Curl post](/Images/Curlpost.png)
 
+### Part c. Similarity/difference between HTTP POST Request and HTTP GET Request
 
-## Part c. Comparision between HTTP GET and Post request/response
+When sending data, the GET method adds the data to the URL. When sending data from Post request input data is not visible in URL.
+Only required headers are visible in http stream when sending data through post request. Curl provide more security from hacking.
+
