@@ -33,10 +33,10 @@ Part a. HTML
 
 ![HTML with Basic tags!](/labs/lab2/Images/Task1_Part_a.png)
 
-![Form with Get Request!](/labs/lab2/Images/GetReq.jpg)
-![Form with Get Response!](/labs/lab2/Images/GetRes.jpg)
-![Form with Post Request!](/labs/lab2/Images/PostReq.jpg)
-![Form with Post Response!](/labs/lab2/Images/PostRes.jpg)
+![Form with Get Request!](/labs/lab2/Images/GetReq.png)
+![Form with Get Response!](/labs/lab2/Images/GetRes.png)
+![Form with Post Request!](/labs/lab2/Images/PostReq.png)
+![Form with Post Response!](/labs/lab2/Images/PostRes.png)
 
 
  
