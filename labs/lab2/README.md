@@ -61,3 +61,7 @@ Part b. Javascript
 
 4. Display an analog clock using an external JavaScript
 
+
+![Analog Clock!](/labs/lab2/Images/AnalogClock.png)
+
+
