@@ -10,7 +10,7 @@
 
 **Short-bio**: Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. 
 
-![Divyani Headshot!](/Images/Divyani_Jain.jpg)
+![Divyani Headshot!](/labs/lab2/Images/Divyani_Jain.jpg)
 
 ## Repository Information
 
@@ -31,7 +31,7 @@ Part a. HTML
 1. Craeted a html file under lab2/waph-jaindy.html.
 2. Used basic html tags like heading tags, paragraph tags, input tag to get user data, image tag for displaying image of headshot, form tag to send data using get and post method.
 
-![HTML with Basic tags!](/Images/Task1_Part_a.jpg)
+![HTML with Basic tags!](/labs/lab2/Images/Task1_Part_a.png)
  
 b. Javascript
 
