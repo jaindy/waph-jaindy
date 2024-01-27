@@ -32,7 +32,6 @@ Part a. HTML
 2. Used basic html tags like heading tags, paragraph tags, input tag to get user data, image tag for displaying image of headshot, form tag to send data using get and post method.
 
 ![HTML with Basic tags!](/labs/lab2/Images/Task1_Part_a.png)
-
 ![Form with Get Request!](/labs/lab2/Images/GetReq.png)
 ![Form with Get Response!](/labs/lab2/Images/GetRes.png)
 ![Form with Post Request!](/labs/lab2/Images/PostReq.png)
@@ -40,5 +39,25 @@ Part a. HTML
 
 
  
-b. Javascript
+Part b. Javascript
+
+1. Inline JavaScript code in HTML tags to display the current date/time when clicked (2 pts) and to log when a key is pressed (2 pts).
+
+![Current Date!](/labs/lab2/Images/DateDisplay.png)
+![Current Date!](/labs/lab2/Images/ShowDateFunction.png)
+
+![Press Key!](/labs/lab2/Images/PressKey.png)
+
+
+2. Internal JavaScript code to display a digital clock
+
+![Digital clock!](/labs/lab2/Images/DigitalClock.png)
+
+3. JavaScript code to show/hide your email when clicked
+
+![Show Email!](/labs/lab2/Images/ShowEmail.png)
+
+![Hide Email!](/labs/lab2/Images/HideEmail.png)
+
+4. Display an analog clock using an external JavaScript
 

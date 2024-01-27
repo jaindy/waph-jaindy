@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>Waph-Jaindy</title>
+	<script type="text/javascript" src="email.js"></script>
+	<script src="https://waph-uc.github.io/clock.js"></script>
+
 </head>
 <body>
 	<div>
@@ -20,14 +23,40 @@
 		<b>Interaction with Forms</b></div></body></br>
 		<i>Form with GET Request</i>
 		<form action="/echo.php" method="GET" name="echo_get">
-			<label for="input">Your Input: </label><input name="data">
+			Your Input: <input name="data">
 			<input type="Submit" value ="Submit"><br><br>
 		</form>
 		<i>Form with POST Request</i>
 		<form action="/echo.php" method="POST" name="echo_post">
-			<label for="input">Your Input: </label><input name="data">
+			Your Input: <input name="data" onkeypress="console.log('You have presses a key')">
 			<input type="Submit" value ="Submit"><br>
 		</form>
 	</div>
+
+	<div>
+		<hr>
+		<br>
+		<b>Inline Javascript to display Date</b><br>
+		<div id="date" onclick="document.getElementById('date').innerHTML = Date()">Show Date()
+		</div>
+		<br>
+	</div>
+	<div>
+		<b>Show/Hide Email</b>
+		<div id="email" onclick="showhideEmail()">Show My Email
+		</div><br>
+	</div>
+		<b>Digital Clock:</b>
+<div id="digital-clock">
+
+</div>
+<script>
+	function displayTime(){
+		document.getElementById('digital-clock').innerHTML="Current time: " +new Date();
+
+	}
+	setInterval(displayTime,500);
+</script>
+
 </body>
 </html>
