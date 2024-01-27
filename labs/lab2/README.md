@@ -10,7 +10,7 @@
 
 **Short-bio**: Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. 
 
-![Divyani Headshot!](Images/Divyani_Jain.jpg)
+![Divyani Headshot!](/Images/Divyani_Jain.jpg)
 
 ## Repository Information
 
@@ -26,6 +26,12 @@ Lab2 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2](ht
 
 Task 1: Basic HTML with forms, and JavaScript
 
-a. HTML 
+Part a. HTML
+
+1. Craeted a html file under lab2/waph-jaindy.html.
+2. Used basic html tags like heading tags, paragraph tags, input tag to get user data, image tag for displaying image of headshot, form tag to send data using get and post method.
+
+![HTML with Basic tags!](/Images/Task1_Part_a.jpg)
+ 
 b. Javascript
 
