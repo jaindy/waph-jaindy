@@ -32,6 +32,13 @@ Part a. HTML
 2. Used basic html tags like heading tags, paragraph tags, input tag to get user data, image tag for displaying image of headshot, form tag to send data using get and post method.
 
 ![HTML with Basic tags!](/labs/lab2/Images/Task1_Part_a.png)
+
+![Form with Get Request!](/Images/GetReq.jpg)
+![Form with Get Response!](/Images/GetRes.jpg)
+![Form with Post Request!](/Images/PostReq.jpg)
+![Form with Post Response!](/Images/PostRes.jpg)
+
+
  
 b. Javascript
 
