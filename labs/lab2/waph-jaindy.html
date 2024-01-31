@@ -2,6 +2,9 @@
 	<html>
 	<head>
 		<title>Waph-Jaindy</title>
+
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 		<script type="text/javascript" src="email.js"></script>
 		<style>
 			body, h1, h2, h3, h4, h5, h6 {
@@ -48,6 +51,13 @@
 			Your Input: <input name="data"  id="data">
 			<input type="button" value ="Submit" onclick="getEcho()"><br><br>
 			<div id="response"></div>
+			<br>
+			<i>jquery Get</i>
+			Your Input: <input name="data" id="jquerydata">
+			<input class="button round" type="button" value="jQuery Ajax GET" onclick="jQueryAjax ()"><br>
+			<i>jquery Post</i>
+			Your Input: <input name="data" id="postdata">
+			<input class="button round" type="button" value="jQuery Ajax Post" onclick="jQueryAjaxPost()">
 		</div>
 	</div>
 	<div style="color:blue; background-color: lightgray;">
@@ -114,6 +124,26 @@
 				xhttp.open("GET","/echo.php?data="+input, true); 
 				xhttp.send();
 				document.getElementById("data").value="";
+			}
+			function jQueryAjax() {
+				var input = $("#jquerydata").val();
+				if (input.length == 0) return;
+				$.get("echo.php?data="+input,
+					function(result) {
+						$("#response").html("Response from server:" + result);
+					}
+					);
+				$("#jquerydata").val("");
+			}
+			function jQueryAjaxPost() {
+				var input = $("#postdata").val();
+				if (input.length == 0) return;
+				$.post("echo.php",{postdata: input},
+					function( result ) {
+						$("#response").html("Response from server:" + result);
+					}
+					);
+				$("#postdata").val("");
 			}
 
 		</script>
