@@ -1,46 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Waph-Jaindy</title>
-	<script type="text/javascript" src="email.js"></script>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Waph-Jaindy</title>
+		<script type="text/javascript" src="email.js"></script>
+		<style>
+			body, h1, h2, h3, h4, h5, h6 {
+				font-family: Arial, Helvetica, sans-serif;
+			}
 
+			#wrap {
+				background-color: chocolate;
+			}
+			
+		</style>
+		<link rel="stylesheet" href=https://waph-uc.github.io/style3.css>
+		
+	</head>
+	<body>
+		<div class="container wrapper">
+			<h1>Web Application Programming and Hacking</h1>
+			<h2>Front-end Web Development</h2>
+			<h3>Instructor: Dr. Phu Phung</h3>
+		</div>
 
-</head>
-<body>
-	<div>
-		<h1>Web Application Programming and Hacking</h1>
-		<h2>Front-end Web Development</h2>
-		<h3>Instructor: Dr. Phu Phung</h3>
+		<div id="main">
+			<h3>Student Name: Jaindy</h3>
+			<img src="/Images/Divyani_Jain.jpg" alt="headshot" width="50">
+		</div>
+
+		<div id="wrap">
+			<hr><br>
+			<b>Interaction with Forms</b></br>
+			<i>Form with GET Request</i>
+			<form action="/echo.php" method="GET" name="echo_get">
+				Your Input: <input name="data">
+				<input type="Submit" value ="Submit"><br><br>
+			</form>
+			<i>Form with POST Request</i>
+			<form action="/echo.php" method="POST" name="echo_post">
+				Your Input: <input name="data" onkeypress="console.log('You have presses a key')">
+				<input type="Submit" value ="Submit"><br>
+			</form>
+
+			<br>
+
+			<i>Ajax Request</i><br>
+			Your Input: <input name="data"  id="data">
+			<input type="button" value ="Submit" onclick="getEcho()"><br><br>
+			<div id="response"></div>
+		</div>
 	</div>
-
-	<div>
-		<h3>Student Name: Jaindy</h3>
-		<img src="/Images/Divyani_Jain.jpg" alt="headshot" width="50">
-	</div>
-
-	<div id="main">
-		<hr><br>
-		<b>Interaction with Forms</b></div></body></br>
-		<i>Form with GET Request</i>
-		<form action="/echo.php" method="GET" name="echo_get">
-			Your Input: <input name="data">
-			<input type="Submit" value ="Submit"><br><br>
-		</form>
-		<i>Form with POST Request</i>
-		<form action="/echo.php" method="POST" name="echo_post">
-			Your Input: <input name="data" onkeypress="console.log('You have presses a key')">
-			<input type="Submit" value ="Submit"><br>
-		</form>
-
-	</div><hr><br>
-	<div>
-		<i>Ajax Request</i><br>
-		Your Input: <input name="data"  id="data">
-		<input type="button" value ="Submit" onclick="getEcho()"><br><br>
-		<div id="response"></div>
-
-	</div>
-	<div>
+	<div style="color:blue; background-color: lightgray;">
 		<hr>
 		<br>
 		<b>Inline Javascript to display Date</b><br>
@@ -48,7 +58,7 @@
 		</div>
 		<br>
 	</div>
-	<div>
+	<div style="background-color: yellowgreen;">
 		<b>Show/Hide Email</b>
 		<div id="email" onclick="showhideEmail()">Show My Email
 		</div><br>
@@ -87,26 +97,27 @@
 
 			function getEcho(){
 				var input = document.getElementById("data").value;
-				
+
 				if(input.length==0)
 				{
 					return 0;
 				}
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
-					
-					if(this.readyState==4 || status==200){
+
+					if(this.readyState==4 && status==200){
 						console.log("Received data="+xhttp.responseText);
 						document.getElementById("response").innerText="Response from server:"+xhttp.responseText;
-							console.log("Response data="+xhttp.responseText);
+						console.log("Response data="+xhttp.responseText);
 					}
 				}
 				xhttp.open("GET","/echo.php?data="+input, true); 
 				xhttp.send();
-				document.getElementById("data").value="";}
+				document.getElementById("data").value="";
+			}
 
-			</script>
+		</script>
 
-		</div>
-	</body>
-	</html>
+	</div>
+</body>
+</html>
