@@ -24,7 +24,7 @@ This is a private repository for divyani Jain to store all code from the course.
 
 Lab2 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2).
 
-Task 1: Basic HTML with forms, and JavaScript
+## Task 1: Basic HTML with forms, and JavaScript
 
 Part a. HTML
 
@@ -48,7 +48,6 @@ Part b. Javascript
 
 ![Press Key!](/labs/lab2/Images/PressKey.png)
 
-
 2. Internal JavaScript code to display a digital clock
 
 ![Digital clock!](/labs/lab2/Images/DigitalClock.png)
@@ -61,7 +60,37 @@ Part b. Javascript
 
 4. Display an analog clock using an external JavaScript
 
-
 ![Analog Clock!](/labs/lab2/Images/AnalogClock.png)
 
+## Task 2: Ajax, CSS, jQuery, and Web API integration
+a. Ajax
+![Ajax Code!](/labs/lab2/Images/AjaxCodewithUI.png)
+![Ajax request/response!](/labs/lab2/Images/Ajax_bowser.png)
 
+b. CSS
+
+![Inline CSS!](/labs/lab2/Images/InlineCSS.png)
+![Internal CSS!](/labs/lab2/Images/InternalCSS.png)
+![External CSS!](/labs/lab2/Images/ExternalCSS.png)
+
+c. jQuery 
+1. When the corresponding button is clicked, send an Ajax GET request to the echo.php web application and display the response content
+![Jquery Get request!](/labs/lab2/Images/JqueryGet.png)
+
+3. Similarly, when the corresponding button is clicked, send an Ajax POST request to the echo.php web application and display the response content
+![Jquery Post request!](/labs/lab2/Images/JqueryPost.png)
+
+d. Web API integration
+
+1. Using Ajax on https://v2.jokeapi.dev/joke/Programming?type=singleLinks to an external site.
+
+![Joke API code!](/labs/lab2/Images/jokeAPI.png)
+![Joke API code!](/labs/lab2/Images/JokeAPIRequest.png)
+![Joke API code!](/labs/lab2/Images/JokeAPIResponse.png)
+
+
+2. Using the fetch API on https://api.agify.io/?name=inputLinks to an external site.
+
+![Fetch API Code!](/labs/lab2/Images/GuessAgeFetchAPI.png)
+![Fetch API Request!](/labs/lab2/Images/FetchRequest.png)
+![Fetch API Response!](/labs/lab2/Images/FetchResponse.png)
