@@ -52,10 +52,10 @@
 			<input type="button" value ="Submit" onclick="getEcho()"><br><br>
 			<div id="response"></div>
 			<br>
-			<i>jquery Get</i>
+			<i>jquery Get</i><br>
 			Your Input: <input name="data" id="jquerydata">
 			<input class="button round" type="button" value="jQuery Ajax GET" onclick="jQueryAjax ()"><br>
-			<i>jquery Post</i>
+			<i>jquery Post</i><br>
 			Your Input: <input name="data" id="postdata">
 			<input class="button round" type="button" value="jQuery Ajax Post" onclick="jQueryAjaxPost()">
 		</div>
@@ -125,6 +125,7 @@
 				xhttp.send();
 				document.getElementById("data").value="";
 			}
+			
 			function jQueryAjax() {
 				var input = $("#jquerydata").val();
 				if (input.length == 0) return;
@@ -138,7 +139,7 @@
 			function jQueryAjaxPost() {
 				var input = $("#postdata").val();
 				if (input.length == 0) return;
-				$.post("echo.php",{postdata: input},
+				$.post("echo.php",{data: input},
 					function( result ) {
 						$("#response").html("Response from server:" + result);
 					}
