@@ -146,7 +146,11 @@
 					);
 				$("#data").val("");
 			}
-
+$.get("https://v2.jokeapi.dev/joke/Programming?type=single",
+	function(result){
+		console.log("From jokeapi"+JSON.stringify(result));
+		$("#response").html("A Programming joke of the day:"+result.joke);
+	});
 		</script>
 
 	</div>
