@@ -10,7 +10,9 @@
 			body, h1, h2, h3, h4, h5, h6 {
 				font-family: Arial, Helvetica, sans-serif;
 			}
-
+			.button:hover{
+				background-color: darkgray;
+			}
 			#wrap {
 				background-color: chocolate;
 			}
@@ -49,15 +51,11 @@
 
 			<i>Ajax Request</i><br>
 			Your Input: <input name="data"  id="data">
-			<input type="button" value ="Submit" onclick="getEcho()"><br><br>
-			<div id="response"></div>
-			<br>
-			<i>jquery Get</i><br>
-			Your Input: <input name="data" id="jquerydata">
-			<input class="button round" type="button" value="jQuery Ajax GET" onclick="jQueryAjax ()"><br>
-			<i>jquery Post</i><br>
-			Your Input: <input name="data" id="postdata">
+			<input type="button" value ="Ajax request" onclick="getEcho()">
+					
+			<input class="button round" type="button" value="jQuery Ajax GET" onclick="jQueryAjax ()">
 			<input class="button round" type="button" value="jQuery Ajax Post" onclick="jQueryAjaxPost()">
+			<div style="background-color:yellow;color: black;" id="response"></div><br>
 		</div>
 	</div>
 	<div style="color:blue; background-color: lightgray;">
@@ -115,7 +113,7 @@
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
 
-					if(this.readyState==4 && status==200){
+					if(this.readyState==4 || status==200){
 						console.log("Received data="+xhttp.responseText);
 						document.getElementById("response").innerText="Response from server:"+xhttp.responseText;
 						console.log("Response data="+xhttp.responseText);
@@ -127,24 +125,26 @@
 			}
 			
 			function jQueryAjax() {
-				var input = $("#jquerydata").val();
+				var input = $("#data").val();
 				if (input.length == 0) return;
 				$.get("echo.php?data="+input,
 					function(result) {
 						$("#response").html("Response from server:" + result);
 					}
 					);
-				$("#jquerydata").val("");
+				$("#data").val("");
 			}
+
+
 			function jQueryAjaxPost() {
-				var input = $("#postdata").val();
+				var input = $("#data").val();
 				if (input.length == 0) return;
 				$.post("echo.php",{data: input},
 					function( result ) {
 						$("#response").html("Response from server:" + result);
 					}
 					);
-				$("#postdata").val("");
+				$("#data").val("");
 			}
 
 		</script>
