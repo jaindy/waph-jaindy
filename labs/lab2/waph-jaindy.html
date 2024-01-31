@@ -52,9 +52,10 @@
 			<i>Ajax Request</i><br>
 			Your Input: <input name="data"  id="data">
 			<input type="button" value ="Ajax request" onclick="getEcho()">
-					
+
 			<input class="button round" type="button" value="jQuery Ajax GET" onclick="jQueryAjax ()">
 			<input class="button round" type="button" value="jQuery Ajax Post" onclick="jQueryAjaxPost()">
+			<input class="button round" type="button" value="Guess age" onclick="guessAge($('#data').val())">
 			<div style="background-color:yellow;color: black;" id="response"></div><br>
 		</div>
 	</div>
@@ -146,13 +147,23 @@
 					);
 				$("#data").val("");
 			}
-$.get("https://v2.jokeapi.dev/joke/Programming?type=single",
-	function(result){
-		console.log("From jokeapi"+JSON.stringify(result));
-		$("#response").html("A Programming joke of the day:"+result.joke);
-	});
-		</script>
 
-	</div>
-</body>
-</html>
+			$.get("https://v2.jokeapi.dev/joke/Programming?type=single",
+				function(result){
+					console.log("From jokeapi"+JSON.stringify(result));
+					$("#response").html("A Programming joke of the day:"+result.joke);
+				});
+
+			async function guessAge(name){
+				const response= await fetch("https://api.agify.io/?name="+name);
+				const result = await response.json();
+				$("#response").html("Hi "+ name+ ", your age should be "+ result.age);
+			}
+			</script>
+
+
+		</div>
+
+
+	</body>
+	</html>
