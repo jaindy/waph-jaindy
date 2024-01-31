@@ -31,6 +31,12 @@
 			Your Input: <input name="data" onkeypress="console.log('You have presses a key')">
 			<input type="Submit" value ="Submit"><br>
 		</form>
+<i>Form with Ajax Request</i>
+		<form action="/echo.php" method="GET" name="echo_get">
+			Your Input: <input name="data">
+			<input type="Submit" value ="Submit"><br><br>
+		</form>
+	
 	</div>
 
 	<div>
@@ -79,6 +85,27 @@
 			}
 
 		</script>
+		<script>
+			function getEcho(){
+				var input = document.getElementById("data").value;
+				if(input.length==0)
+				{
+					return 0;
+				}
+				var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+//alert("readyState=" + this.readyState +", status=" + this.status+", statusText=" + this.statusText);
+	if(this.readyState==4 && status==200){
+	console.log("Received data="+xhttp.responseText);
+		document.getElementById("response").innerText="Response from server:"+xhttp.responseText;
+	}
+}
+xhttp.open("GET","/echo.php?data="+input, true); 
+xhttp.send();
+				document.getElementById("data").value="";
+
+		</script>
+		
 	</div>
 </body>
 </html>
