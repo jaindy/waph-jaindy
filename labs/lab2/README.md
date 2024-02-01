@@ -84,7 +84,7 @@ d. Web API integration
 
 1. Using Ajax on https://v2.jokeapi.dev/joke/Programming?type=singleLinks to an external site.
 
-![Joke API code!](/labs/lab2/Images/jokeAPI.png)
+![Joke API code!](/labs/lab2/Images/jokeApi.png)
 ![Joke API code!](/labs/lab2/Images/JokeAPIRequest.png)
 ![Joke API code!](/labs/lab2/Images/JokeAPIResponse.png)
 
