@@ -63,7 +63,7 @@ Part b. Javascript
 ![Analog Clock!](/labs/lab2/Images/AnalogClock.png)
 
 ## Task 2: Ajax, CSS, jQuery, and Web API integration
-a. Ajax
+a. Ajax (Asynchronous JavaScript And XML): It is used browser built-in XMLHttpRequest object to request data from a web server.
 
 Added a new input field in html file to get the user input and to display the result in another new div tag. Construct and send an Ajax GET request to the echo.php web application. Listen to the HTTP response and display the response.
 
