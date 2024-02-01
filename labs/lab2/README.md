@@ -67,24 +67,34 @@ a. Ajax
 ![Ajax Code!](/labs/lab2/Images/AjaxCodewithUI.png)
 ![Ajax request/response!](/labs/lab2/Images/Ajax_bowser.png)
 
-b. CSS
+b. CSS (Cascading Style Sheets):
+CSS is used to style and layout web pages. CSS can be added to HTML elements in 3 ways Inline, Internal and External.
+Inline CSS: style attribute is used in HTML elements.
 
 ![Inline CSS!](/labs/lab2/Images/InlineCSS.png)
+
+Internal CSS: style Tag is used in head section. you can access class using dot and id using #.
+
 ![Internal CSS!](/labs/lab2/Images/InternalCSS.png)
+
+External CSS: Using external css file. link tag is used to apply external CSS.
+
 ![External CSS!](/labs/lab2/Images/ExternalCSS.png)
 
 c. jQuery 
-1. When the corresponding button is clicked, send an Ajax GET request to the echo.php web application and display the response content
+1. When the button is clicked, send an Ajax GET request to the echo.php web application and display the response content.
+   
 ![Jquery Get request!](/labs/lab2/Images/JqueryGet.png)
 
-3. Similarly, when the corresponding button is clicked, send an Ajax POST request to the echo.php web application and display the response content
+2. when the corresponding button is clicked, send an Ajax POST request to the echo.php web application and display the response content.
+   
 ![Jquery Post request!](/labs/lab2/Images/JqueryPost.png)
 
 d. Web API integration
 
-1. Integrating WEBAPI to a webpage and displaying the response using AJAX
+1. Integrating WEBAPI to a webpage and displaying the response using AJAX. JSON object values can be accessed using dot (.) or bracket ([]) notation. Used Ajax to send a request and print out the result from the server in the console.
+   
 API: https://v2.jokeapi.dev/joke/Programming?type=single
-JSON object values can be accessed using dot (.) or bracket ([]) notation. Used Ajax to send a request and print out the result from the server in the console.
 
 ![Joke API code!](/labs/lab2/Images/jokeApi.png)
 ![Joke API code!](/labs/lab2/Images/JokeAPIRequest.png)
