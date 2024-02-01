@@ -29,6 +29,8 @@ Lab2 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2](ht
 ## Task 1: Basic HTML with forms, and JavaScript
 
 ## Part a. HTML
+HTML file folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2/waph-jaindy.html](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2/waph-jaindy.html).
+
 
 1. Created a html file under lab2/waph-jaindy.html.
 2. Used basic html tags like heading tags, paragraph tags, input tag to get user data, image tag for displaying image of headshot, form tag to send data using get and post method.
