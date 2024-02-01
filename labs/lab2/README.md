@@ -22,11 +22,13 @@ This is a private repository for divyani Jain to store all code from the course.
 
 ## The lab's overview
 
+We have studied front-end web technologies in Lab 2 in order to create a web page. Heading, form, image, style, script, paragraph, button, input, and many more HTML tags were utilized. used external, inline, and internal CSS to apply the website's style and layout. retrieving a response from the server using jQuery, JavaScript, and AJAX. 
+
 Lab2 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2).
 
 ## Task 1: Basic HTML with forms, and JavaScript
 
-Part a. HTML
+## Part a. HTML
 
 1. Created a html file under lab2/waph-jaindy.html.
 2. Used basic html tags like heading tags, paragraph tags, input tag to get user data, image tag for displaying image of headshot, form tag to send data using get and post method.
@@ -38,38 +40,39 @@ Part a. HTML
 ![Form with Post Response!](/labs/lab2/Images/PostRes.png)
 
 
-Part b. Javascript
+## Part b. Javascript
 
-1. Added Inline JavaScript code in HTML tags to display the current date/time when user clicked and used a onkeypress function to log when a key is pressed.
+b.1. Added Inline JavaScript code in HTML tags to display the current date/time when user clicked and used a onkeypress function to log when a key is pressed.
 
 ![Current Date!](/labs/lab2/Images/DateDisplay.png)
 ![Current Date!](/labs/lab2/Images/ShowDateFunction.png)
 
 ![Press Key!](/labs/lab2/Images/PressKey.png)
 
-2. Added Internal JavaScript code code in HTML file to display a digital clock.
+b.2. Added Internal JavaScript code code in HTML file to display a digital clock.
 
 ![Digital clock!](/labs/lab2/Images/DigitalClock.png)
 
-3. Added JavaScript code in HTML file to show/hide email when clicked.
+b.3. Added JavaScript code in HTML file to show/hide email when clicked.
 
 ![Show Email!](/labs/lab2/Images/ShowEmail.png)
 
 ![Hide Email!](/labs/lab2/Images/HideEmail.png)
 
-4. Added code to display an analog clock using an external JavaScript.
+b.4. Added code to display an analog clock using an external JavaScript.
 
 ![Analog Clock!](/labs/lab2/Images/AnalogClock.png)
 
 ## Task 2: Ajax, CSS, jQuery, and Web API integration
-a. Ajax (Asynchronous JavaScript And XML): It is used browser built-in XMLHttpRequest object to request data from a web server.
+
+2.a. Ajax (Asynchronous JavaScript And XML): It is used browser built-in XMLHttpRequest object to request data from a web server.
 
 Added a new input field in html file to get the user input and to display the result in another new div tag. Construct and send an Ajax GET request to the echo.php web application. Listen to the HTTP response and display the response.
 
 ![Ajax Code!](/labs/lab2/Images/AjaxCodewithUI.png)
 ![Ajax request/response!](/labs/lab2/Images/Ajax_bowser.png)
 
-b. CSS (Cascading Style Sheets):
+2.b. CSS (Cascading Style Sheets):
 CSS is used to style and layout web pages. CSS can be added to HTML elements in 3 ways Inline, Internal and External.
 Inline CSS: style attribute is used in HTML elements.
 
@@ -83,7 +86,7 @@ External CSS: Using external css file. link tag is used to apply external CSS.
 
 ![External CSS!](/labs/lab2/Images/ExternalCSS.png)
 
-c. jQuery 
+2.c. jQuery 
 1. When the button is clicked, send an Ajax GET request to call the echo.php web application and display the response content.
    
 ![Jquery Get request!](/labs/lab2/Images/JqueryGet.png)
@@ -92,7 +95,7 @@ c. jQuery
    
 ![Jquery Post request!](/labs/lab2/Images/JqueryPost.png)
 
-d. Web API integration
+2.d. Web API integration
 
 1. Integrating WEBAPI to a webpage and displaying the response using AJAX. JSON object values can be accessed using dot (.) or bracket ([]) notation. Used Ajax to send a request and print out the result from the server in the console.
    
