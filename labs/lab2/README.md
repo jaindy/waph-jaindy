@@ -28,7 +28,7 @@ Lab2 folder link: [https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2](ht
 
 Part a. HTML
 
-1. Craeted a html file under lab2/waph-jaindy.html.
+1. Created a html file under lab2/waph-jaindy.html.
 2. Used basic html tags like heading tags, paragraph tags, input tag to get user data, image tag for displaying image of headshot, form tag to send data using get and post method.
 
 ![HTML with Basic tags!](/labs/lab2/Images/Task1_Part_a.png)
@@ -38,27 +38,26 @@ Part a. HTML
 ![Form with Post Response!](/labs/lab2/Images/PostRes.png)
 
 
- 
 Part b. Javascript
 
-1. Inline JavaScript code in HTML tags to display the current date/time when clicked (2 pts) and to log when a key is pressed (2 pts).
+1. Added Inline JavaScript code in HTML tags to display the current date/time when user clicked and used a onkeypress function to log when a key is pressed.
 
 ![Current Date!](/labs/lab2/Images/DateDisplay.png)
 ![Current Date!](/labs/lab2/Images/ShowDateFunction.png)
 
 ![Press Key!](/labs/lab2/Images/PressKey.png)
 
-2. Internal JavaScript code to display a digital clock
+2. Added Internal JavaScript code code in HTML file to display a digital clock.
 
 ![Digital clock!](/labs/lab2/Images/DigitalClock.png)
 
-3. JavaScript code to show/hide your email when clicked
+3. Added JavaScript code in HTML file to show/hide email when clicked.
 
 ![Show Email!](/labs/lab2/Images/ShowEmail.png)
 
 ![Hide Email!](/labs/lab2/Images/HideEmail.png)
 
-4. Display an analog clock using an external JavaScript
+4. Added code to display an analog clock using an external JavaScript.
 
 ![Analog Clock!](/labs/lab2/Images/AnalogClock.png)
 
