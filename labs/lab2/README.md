@@ -82,15 +82,25 @@ c. jQuery
 
 d. Web API integration
 
-1. Using Ajax on https://v2.jokeapi.dev/joke/Programming?type=singleLinks to an external site.
+1. Integrating WEBAPI to a webpage and displaying the response using AJAX
+API: https://v2.jokeapi.dev/joke/Programming?type=single
+JSON object values can be accessed using dot (.) or bracket ([]) notation. Used Ajax to send a request and print out the result from the server in the console.
 
 ![Joke API code!](/labs/lab2/Images/jokeApi.png)
 ![Joke API code!](/labs/lab2/Images/JokeAPIRequest.png)
 ![Joke API code!](/labs/lab2/Images/JokeAPIResponse.png)
 
 
-2. Using the fetch API on https://api.agify.io/?name=inputLinks to an external site.
+2. Integrating with a third-party Web API with user input using fetch()
+   
+The global fetch() method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available. It is an asynchronous function. await must be used within an asynchronous function.
+Web API return response in Json format which is easy to read.
+
+Used existing user input field and call a function when user click on button.
 
 ![Fetch API Code!](/labs/lab2/Images/GuessAgeFetchAPI.png)
+
+Inspect the network tab in the browser to examine the request and response.
+
 ![Fetch API Request!](/labs/lab2/Images/FetchRequest.png)
 ![Fetch API Response!](/labs/lab2/Images/FetchResponse.png)
