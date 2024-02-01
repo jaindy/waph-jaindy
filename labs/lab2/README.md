@@ -64,6 +64,9 @@ Part b. Javascript
 
 ## Task 2: Ajax, CSS, jQuery, and Web API integration
 a. Ajax
+
+Added a new input field in html file to get the user input and to display the result in another new div tag. Construct and send an Ajax GET request to the echo.php web application. Listen to the HTTP response and display the response.
+
 ![Ajax Code!](/labs/lab2/Images/AjaxCodewithUI.png)
 ![Ajax request/response!](/labs/lab2/Images/Ajax_bowser.png)
 
@@ -82,11 +85,11 @@ External CSS: Using external css file. link tag is used to apply external CSS.
 ![External CSS!](/labs/lab2/Images/ExternalCSS.png)
 
 c. jQuery 
-1. When the button is clicked, send an Ajax GET request to the echo.php web application and display the response content.
+1. When the button is clicked, send an Ajax GET request to call the echo.php web application and display the response content.
    
 ![Jquery Get request!](/labs/lab2/Images/JqueryGet.png)
 
-2. when the corresponding button is clicked, send an Ajax POST request to the echo.php web application and display the response content.
+2. when the corresponding button is clicked, send an Ajax POST request to call the echo.php web application and display the response content.
    
 ![Jquery Post request!](/labs/lab2/Images/JqueryPost.png)
 
