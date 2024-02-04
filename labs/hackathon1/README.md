@@ -30,14 +30,14 @@ Injected Code: <script>alert('level 0 hack by Divyani Jain')</script>
 
 Source code: echo $_REQUEST["input"];
 
-#### Level 1: hacked level1 by injected javascript script tag in url. 
+#### Level 1: Hacked level1 by injected javascript script tag in url. 
 
 Injected Code: <script>alert('level 0 hack by Divyani Jain')</script>
 ![Level 1!](/Images/Level1.png)
 
 Source code: echo $_REQUEST["input"];
 
-#### Level 2: hacked the level2 by changing the URL path in action attribute of the Form tag in HTML and send data in POST request.
+#### Level 2: Hacked the level2 by changing the URL path in action attribute of the Form tag in HTML and send data in POST request.
 Injected Code:
 ![Injected code Level 2!](/Images/InjectedCodeForLevel2.png)
 ![Level 2!](/Images/Level2.png)
@@ -49,7 +49,7 @@ Source code: echo $_REQUEST["input"];
 
 Source code of the echo.php web application: echo strip_tags("<script>alert('level 3 hack by Divyani Jain')</script>","<img>");
 
-#### Level 4:Hacked the level4 by providing alert in onerror event in image tag.
+#### Level 4: Hacked the level4 by providing alert in onerror event in image tag.
 ![Level 4!](/Images/Level4.png)
 
 Source code of the echo.php web application: echo strip_tags("<script>alert('level 4 hack by Divyani Jain')</script>","<img>");
