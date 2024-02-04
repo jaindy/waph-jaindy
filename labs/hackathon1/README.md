@@ -39,7 +39,7 @@ Source code: echo $_REQUEST["input"];
 
 #### Level 2: hacked the level2 by changing the URL path in action attribute of the Form tag in HTML and send data in POST request.
 Injected Code:
-![Injected code Level 2!](/Images/Level2.png)
+![Injected code Level 2!](/Images/InjectedCodeForLevel2.png)
 ![Level 2!](/Images/Level2.png)
 
 Source code: echo $_REQUEST["input"];
