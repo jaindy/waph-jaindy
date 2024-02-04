@@ -46,26 +46,23 @@ Source code: echo $_REQUEST["input"];
 
 
 ## Level 3: Hacked the level3 by providing alert in onerror event in image tag.
-Injected Code: <img src="" onerror="alert('level 3 hack by Divyani Jain')">
-
 ![Level 3!](/Images/Level3.png)
 
 Source code of the echo.php web application: echo strip_tags("<script>alert('level 3 hack by Divyani Jain')</script>","<img>");
 
 ## Level 4:Hacked the level4 by providing alert in onerror event in image tag.
-Injected Code: <img src="" onerror="alert('level 3 hack by Divyani Jain')">
 ![Level 4!](/Images/Level4.png)
 
 Source code of the echo.php web application: echo strip_tags("<script>alert('level 4 hack by Divyani Jain')</script>","<img>");
 
 ## Level 5: Hacked the level5 by providing window alert in onload event in body tag.
-Injected Code: <body onload="window['al\u0065rt']('level 5 hack by divyani jain')">
-
 ![Level 5!](/Images/Level5.png)
 
 Source code of the echo.php web application: echo strip_tags("<script>alert('level 5 hack by Divyani Jain')</script>","<img>");
 
-## Level 6:
-Injected Code:
-Source code of the echo.php web application:
+## Level 6: 
+
+Source code of the echo.php web application: echo htmlentities($_REQUEST["input"])
+
+
 
