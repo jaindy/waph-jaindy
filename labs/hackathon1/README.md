@@ -47,7 +47,12 @@ $_REQUEST['input'];
 
 ## Level 2: hacked the level2 by changing the URL path in action attribute of the Form tag in HTML and Send Ajax post request.
 Injected Code:
+<form action="http://waph-hackathon.eastus.cloudapp.azure.com/xss/level2/echo.php" method="POST" name="echo_post">
+Your Input: <input name="input" onkeypress="console.log('You have presses a key')">
+<input type="Submit" value="Submit">
+</form>
 
+![Injected code Level 2!](/Images/Level2.png)
 ![Level 2!](/Images/Level2.png)
 
 Source code of the echo.php web application:
@@ -57,6 +62,7 @@ $_REQUEST['input'];
 ?>
 
 ## Level 3: hacked the level3 by providing  
+Injected Code:
 ![Level 3!](/Images/Level3.png)
 
 Source code of the echo.php web application:
@@ -65,8 +71,12 @@ echo strip_tags("<script>alert('level 3 hack by Divyani Jain')</script>","<img>"
 ?>
 
 ## Level 4:
+Injected Code:
 ![Level 4!](/Images/Level4.png)
 ## Level 5:
+Injected Code:
 ![Level 5!](/Images/Level5.png)
 ## Level 6:
+Injected Code:
+Source code of the echo.php web application:
 
