@@ -64,4 +64,8 @@ Source code of the echo.php web application: echo strip_tags("<script>alert('lev
 Source code of the echo.php web application: echo htmlentities($_REQUEST["input"])
 
 
+## Task 2: Implement input validation and cross site defense methods.
+Update the echo.php file where it is checking if the input field is empty or not. If not it is also not allowing script tag in input field, URL or via Post request.
+![Input field validation!](/Images/InputFieldValidation.png)
+![Prevent alert execution!](/Images/Preventalert.png)
 
