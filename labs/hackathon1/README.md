@@ -8,7 +8,7 @@
 
 **Email**: jaindy@mail.uc.edu
 
-**Short-bio**: Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. 
+**Short-bio**: I have a total of 6 years of work experience in IT as a software developer.
 
 ![Divyani Headshot!](/Images/Divyani_Jain.jpg)
 
@@ -67,9 +67,10 @@ Source code of the echo.php web application: echo htmlentities($_REQUEST["input"
 
 ## Task 2: Implement input validation and cross site defense methods.
 
-Update the echo.php file where it is checking if the input field is empty or not. If not it is also not allowing script tag in input field, URL or via Post request.
+Update the echo.php file where it is checking if the input field is empty or not. It is not allowing alert popuu by adding script tag in input field, URL or via Post request. 
+![Server side validation!](/Images/ServerSideValidation.png)
 ![Prevent alert execution!](/Images/Preventalert.png)
 ![Input field validation!](/Images/InputFieldValidation.png)
-![Server side validation!](/Images/ServerSideValidation.png)
+
 
 
