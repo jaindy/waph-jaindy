@@ -70,6 +70,6 @@ Source code of the echo.php web application: echo htmlentities($_REQUEST["input"
 Update the echo.php file where it is checking if the input field is empty or not. If not it is also not allowing script tag in input field, URL or via Post request.
 ![Prevent alert execution!](/Images/Preventalert.png)
 ![Input field validation!](/Images/InputFieldValidation.png)
-![Server side validation!](/Images/serverSideValidation.png)
+![Server side validation!](/Images/ServerSideValidation.png)
 
 
