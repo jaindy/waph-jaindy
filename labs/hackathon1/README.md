@@ -69,7 +69,7 @@ Source code of the echo.php web application: echo htmlentities($_REQUEST["input"
 
 Update the echo.php file where it is checking if the input field is empty or not. It is not allowing alert popuu by adding script tag in input field, URL or via Post request. 
 ![Server side validation!](/Images/ServerSideValidation.png)
-![Prevent alert execution!](/Images/Preventalert.png)
+![Prevent alert execution!](/Images/AlertValidation.png)
 ![Input field validation!](/Images/InputFieldValidation.png)
 
 
