@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href=https://waph-uc.github.io/style3.css>
 		
 	</head>
-	<body>
+	<body onload="checkinput()">
 		<div class="container wrapper">
 			<h1>Web Application Programming and Hacking</h1>
 			<h2>Front-end Web Development</h2>
@@ -38,19 +38,19 @@
 			<b>Interaction with Forms</b></br>
 			<i>Form with GET Request</i>
 			<form action="/echo.php" method="GET" name="echo_get">
-				Your Input: <input name="data">
+				Your Input: <input name="data" required>
 				<input type="Submit" value ="Submit"><br><br>
 			</form>
 			<i>Form with POST Request</i>
 			<form action="/echo.php" method="POST" name="echo_post">
-				Your Input: <input name="data" onkeypress="console.log('You have presses a key')">
+				Your Input: <input name="data" onkeypress="console.log('You have presses a key')" required>
 				<input type="Submit" value ="Submit"><br>
 			</form>
 
 			<br>
 
 			<i>Ajax Request</i><br>
-			Your Input: <input name="data"  id="data">
+			Your Input: <input name="data"  id="data" required>
 			<input type="button" value ="Ajax request" onclick="getEcho()">
 
 			<input class="button round" type="button" value="jQuery Ajax GET" onclick="jQueryAjax ()">
@@ -114,9 +114,9 @@
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
 
-					if(this.readyState==4 && status==200){
+					if(this.readyState==4 || status==200){
 						console.log("Received data="+xhttp.responseText);
-						document.getElementById("response").innerText="Response from server:"+xhttp.responseText;
+						document.getElementById("response").innerHTML="Response from server:"+xhttp.responseText;
 						console.log("Response data="+xhttp.responseText);
 					}
 				}
@@ -148,22 +148,32 @@
 				$("#data").val("");
 			}
 
-			$.get("https://v2.jokeapi.dev/joke/Programming?type=single",
-				function(result){
-					console.log("From jokeapi"+JSON.stringify(result));
-					$("#response").html("A Programming joke of the day:"+result.joke);
-				});
+			function checkinput() {
+				var input = "single";
+				if (input.length == 0) return;
+
+				$.get("https://v2.jokeapi.dev/joke/Programming?type="+input,
+					function(result){
+						console.log("From jokeapi"+JSON.stringify(result));
+						$("#response").html("A Programming joke of the day:"+result.joke);
+					});
+			}
+
 
 			async function guessAge(name){
-				const response= await fetch("https://api.agify.io/?name="+name);
+
+				const encoded= document.createElement('div');
+				encoded.innerText=name;
+				const response= await fetch("https://api.agify.io/?name="+encoded.innerHTML);
+
 				const result = await response.json();
 				$("#response").html("Hi "+ name+ ", your age should be "+ result.age);
 			}
-			</script>
+		</script>
 
 
-		</div>
+	</div>
 
 
-	</body>
-	</html>
+</body>
+</html>
