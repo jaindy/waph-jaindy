@@ -24,10 +24,11 @@ This is a private repository for divyani Jain to store all code from the course.
 
   - [Lab0](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab0): Development Environment Setup 
   - [Lab1](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1): Foundation of the Web 
-
   - [Lab2](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2): Front-end Web Development
-  - [Hackathon1](https://github.com/jaindy/waph-jaindy/tree/main/labs/hackathon1): Cross site scripting attack and defense
+ 
+### Hackathon
 
+ - [Hackathon1](https://github.com/jaindy/waph-jaindy/tree/main/labs/hackathon1): Cross site scripting attack and defense
 
 
 >>>>>>> 4687be119c4bf43c8d6b7c73da0d693520fd644c
