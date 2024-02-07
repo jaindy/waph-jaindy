@@ -38,19 +38,19 @@
 			<b>Interaction with Forms</b></br>
 			<i>Form with GET Request</i>
 			<form action="/echo.php" method="GET" name="echo_get">
-				Your Input: <input name="data" required>
+				Your Input: <input name="data" >
 				<input type="Submit" value ="Submit"><br><br>
 			</form>
 			<i>Form with POST Request</i>
 			<form action="/echo.php" method="POST" name="echo_post">
-				Your Input: <input name="data" onkeypress="console.log('You have presses a key')" required>
+				Your Input: <input name="data" onkeypress="console.log('You have presses a key')" >
 				<input type="Submit" value ="Submit"><br>
 			</form>
 
 			<br>
 
 			<i>Ajax Request</i><br>
-			Your Input: <input name="data"  id="data" required>
+			Your Input: <input name="data"  id="data">
 			<input type="button" value ="Ajax request" onclick="getEcho()">
 
 			<input class="button round" type="button" value="jQuery Ajax GET" onclick="jQueryAjax ()">

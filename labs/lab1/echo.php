@@ -1,10 +1,12 @@
 <?php
-
    
- if(empty($_REQUEST["data"])) {
-    echo "Input is required";
+ if(!isset($_REQUEST["data"])) {
+    die("{\"error\":\"Please provide input field\"}");
   } else {
-    echo htmlentities($_REQUEST["data"],ENT_QUOTES, "UTF-8");
-  }
+  echo  htmlentities($_REQUEST["data"]);
+    }
 
 ?>
+
+
+ 
