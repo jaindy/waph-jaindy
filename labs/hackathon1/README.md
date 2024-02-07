@@ -164,7 +164,7 @@ I tried php function htmlspecialchars_decode($input) in php file and added html 
 Updated and push the chnages done in the echo.php file where it is checking if the input field is empty or not. It is not allowing alert popup by adding script tag in input field, URL or via Post request. Also, added input validation for Joke API.
 <br />
 
-![Server side validation!](Images/ServerSideValidation.png)
+![Server side validation!](Images/serverSideValidation.png)
 
 ![Prevent alert execution!](Images/AlertValidation.png)
 
