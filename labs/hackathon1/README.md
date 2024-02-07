@@ -166,6 +166,8 @@ Updated and push the chnages done in the echo.php file where it is checking if t
 
 ![Server side validation!](Images/serverSideValidation.png)
 
+![Input alert validation!](Images/inputValidation.png)
+
 ![Prevent alert execution!](Images/AlertValidation.png)
 
 ![External API validation!](Images/ValidateJokeAPI.png)
