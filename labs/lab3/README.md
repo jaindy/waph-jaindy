@@ -54,3 +54,22 @@ Open the chrome browser and hit the URL "localhost/waph-jaindy-session.php". Ope
 ![Session hijacking attack!](Images/hijackingAttack.png)
 
 
+
+
+Task 2
+
+1. Set up mysql database.
+
+![database insallation](Images/Installdatabase.png)
+![database creation](Images/createDatabase.png)
+![Table creation](Images/TableCraeted.png)
+
+2. Created a php login page to validate credentials.
+
+![Login page](Images/loginform.png)
+![validate credentials](Images/successfullylogin.png)
+
+
+
+
+
