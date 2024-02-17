@@ -10,7 +10,7 @@
 
 **Short-bio**: Work experience of more than 6 years in IT Industry. Specialize in Analysis, Development, Design, Testing, Debugging and Implementation of Web Applications. 
 
-![Divyani Headshot!](Images/Divyani_Jain.jpg)
+![Divyani Headshot!](/Images/Divyani_Jain.jpg)
 
 ## Repository Information
 
@@ -20,28 +20,26 @@ This is a private repository for divyani Jain to store all code from the course.
 
 ### Lab3 overview
 
-Task 1: 
-
-
+## Task 1: Understanding session management in a PHP Web
 Part a: Tested session in php with different browser such as chrome, firefox. 
 
 1. When tested session without session_start() method in php at the time of page refresh it did not count the times when you refresh the page.  
 
-![Session without start!](Images/sessionWithoutStart.png)
+![Session without start!](/Images/sessionWithoutStart.png)
 
 2. When tested session with session_start() method in php at the time of page refresh it did count the times when you refresh the page.  
 
-![Session start!](Images/SessionTest.png)
+![Session start!](/Images/SessionTest.png)
 
 Part b. Tested the Cookie information in the http request/response usig wireshark tool.
 
 1. Cleared the browser history in firefox browser and hit the localhost/waph-jaindy-session.php. In first request there is no cookie information in http request. but, response contains the cookie information.
 
-![Wireshark first request/response!](Images/wiresharkFirstRequest.png)
+![Wireshark first request/response!](/Images/wiresharkFirstRequest.png)
 
 2. Refresh the URL "localhost/waph-jaindy-session.php". In second request there is cookie information in http request. but, in response cookie information is not present.
 
-![Wireshark Second request/response!](Images/WiresharkSecondRequest.png)
+![Wireshark Second request/response!](/Images/WiresharkSecondRequest.png)
 
 Part c. Performed the session hijacking attack using cookie information.
 
@@ -50,26 +48,25 @@ Open the chrome browser and hit the URL "localhost/waph-jaindy-session.php". Ope
 
 2. Performing a hijacking attack: Open another browser firefox and hit the URL "localhost/waph-jaindy-session.php" multiple times and enter the copied cookie information in console and hit the url again.
 
-![Session hijacking!](Images/sessionHijacking.png)
-![Session hijacking attack!](Images/hijackingAttack.png)
+![Session hijacking!](/Images/sessionHijacking.png)
+![Session hijacking attack!](/Images/hijackingAttack.png)
 
 
-
-
-Task 2
+## Task 2: A simple yet secure login system in PHP with MySQL
 
 1. Set up mysql database.
 
-![database insallation](Images/Installdatabase.png)
-![database creation](Images/createDatabase.png)
-![Table creation](Images/TableCraeted.png)
+![database insallation](/Images/Installdatabase.png)
+![database creation](/Images/createDatabase.png)
+![Table creation](/Images/TableCreated.png)
 
 2. Created a php login page to validate credentials.
 
-![Login page](Images/loginform.png)
-![validate credentials](Images/successfullylogin.png)
+![Login page](/Images/loginform.png)
+![validate credentials](/Images/successfullylogin.png)
 
-
-
+3. Performing XSS and SQL Injection attacks
+   
+![SQL Injection page](/Images/SQLInjection.png)
 
 
