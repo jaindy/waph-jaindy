@@ -30,6 +30,7 @@ This is a private repository for divyani Jain to store all code from the course.
 ### Hackathon
 
  - [Hackathon1](https://github.com/jaindy/waph-jaindy/tree/main/hackathons/hackathon1): Cross site scripting attack and defense
+ - [Hackathon2](https://github.com/jaindy/waph-jaindy/tree/main/hackathons/hackathon2): SQL attack
 
 ### Individual Projects
 
