@@ -69,4 +69,7 @@ Open the chrome browser and hit the URL "localhost/waph-jaindy-session.php". Ope
    
 ![SQL Injection page](/Images/SQLInjection.png)
 
+4. secure database query using prepared statement.
+
+   ![SQL prepared_statement](/Images/PreparedStmt.png)
 
