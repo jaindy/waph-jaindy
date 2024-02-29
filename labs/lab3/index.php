@@ -5,7 +5,7 @@
 	$password=$_POST["password"];
 	if (checklogin_mysql($username,$password)) {
 ?>
-	<h2> Welcome <?php echo $_POST['username']; ?> !</h2>
+	<h2> Welcome <?php echo htmlentities($_POST['username']); ?> !</h2>
 <?php		
 	}else{
 		echo "<script>alert('Invalid username/password');window.location='form.php';</script>";
