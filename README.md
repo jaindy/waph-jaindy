@@ -26,6 +26,7 @@ This is a private repository for divyani Jain to store all code from the course.
   - [Lab1](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab1): Foundation of the Web 
   - [Lab2](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab2): Front-end Web Development
   - [Lab3](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab3): Secure Web Application Development in PHP with Sessions & MySQL Database
+  - [Lab4](https://github.com/jaindy/waph-jaindy/tree/main/labs/lab4): Database security
  
 ### Hackathon
 
