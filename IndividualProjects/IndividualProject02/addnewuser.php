@@ -3,70 +3,30 @@ $username= $_POST["username"];
 $password= $_POST["password"];
 if(isset($username) and isset($password)){
 
-	echo "Debug got username=$username ; and password=$password";
-}else{
+	if (addnewuser($username,$password)){
+		echo "Registration success";
+	}else{
+	echo "Registration failed";
+	}
+}
+else{
 	echo "no username/password provided.";
 }
-
-	/* $lifetime=15*60;
-	$path="/";
-	$domain="192.168.56.101";
-	$secure=TRUE;
-	$httponly=TRUE;
-	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
-	session_start();    
-	$username=$_POST["username"];
-	$password=$_POST["password"];
-	if(isset($_POST["username"]) and isset($_POST["password"])){
-		if (checklogin_mysql($username,$password)) {
-		$_SESSION['authenticated']=TRUE;
-		$_SESSION['username']= $_POST["username"];
-		$_SESSION['browser']=$_SESSION['HTTP_USER_AGENT'];
-	}else{
-		session_destroy();
-		echo "<script>alert('Invalid username/password');window.location='form.php';</script>";
-		die();
-	}
-}
-	if(!isset($_SESSION['authenticated']) or $_SESSION['authenticated'] !=TRUE){
-		session_destroy();
-		echo "<script>alert('You are not login. Please login again');</script>";
-		header("Refesh:0; url=form.php");
-		die();
-	}
-	if($_SESSION['browser'] !=$_SESSION['HTTP_USER_AGENT']){
-		session_destroy();
-		echo "<script>alert('Session hijacking attack is detected!');</script>";
-		header("Refesh:0; url=form.php");
-		die();
-		
-	}*/
 	
-	function checklogin($username, $password) {
-	
-		$account = array("admin","1234");
-		if (($username== $account[0]) and ($password == $account[1])) 
-		  return TRUE;
-		else 
-		  return FALSE;
-  	}
-  	
-  	function checklogin_mysql($username, $password) {
+  	function addnewuser($username, $password) {
   	
 	$mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );
 	
 	if($mysqli->connect_errno){
 	printf("DB connection failed",$mysqli->connect_error);
-	exit();
+	return false;
 	}
   	
-	$sql= "SELECT * FROM users WHERE username=? AND password=md5(?)";
-  	$stmt=$mysqli->prepare($sql);
-  	$stmt->bind_param("ss",$username, $password);
-  	$stmt->execute();
-  	$result=$stmt->get_result();
-  	
-  	if($result->num_rows ==1) 	return TRUE;
+	//$sql= "SELECT * FROM users WHERE username=? AND password=md5(?)";
+	$prepared_sql="INSERT INTO users (username,password)Values(?,md5(?))";
+  	$stmt=$mysqli->prepare($prepared_sql);
+  	$stmt->bind_param("ss",$username, $password); 	
+  	if($stmt->execute()) 	return TRUE;
   	return false;
   	}
 ?>
