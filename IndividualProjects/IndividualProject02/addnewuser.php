@@ -1,19 +1,33 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: burlywood;
+}
+</style>
+</head>
+<body>
 <?php
 $username= $_POST["username"];
 $password= $_POST["password"];
-if(isset($username) and isset($password)){
+$name= $_POST["name"];
+$email= $_POST["email"];
+if(isset($username) and isset($password) and isset($name) and isset($email) ){
 
-	if (addnewuser($username,$password)){
-		echo "Registration success";
+	if (addnewuser($username,$password,$name,$email)){
+		echo "Congratulations! you have sucessfully registered in the system" <a href='./Loginform.php'>Please Login<a>;
 	}else{
-	echo "Registration failed";
+	echo "Registration failed! please try again.";
 	}
 }
 else{
-	echo "no username/password provided.";
+	echo "No username/password provided.";
 }
 	
-  	function addnewuser($username, $password) {
+  	function addnewuser($username, $password,$name,$email) {
   	
 	$mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );
 	
@@ -22,13 +36,13 @@ else{
 	return false;
 	}
   	
-	//$sql= "SELECT * FROM users WHERE username=? AND password=md5(?)";
-	$prepared_sql="INSERT INTO users (username,password)Values(?,md5(?))";
+	$prepared_sql="INSERT INTO account (username,password,name,email)Values(?,md5(?),?,?)";
   	$stmt=$mysqli->prepare($prepared_sql);
-  	$stmt->bind_param("ss",$username, $password); 	
+  	$stmt->bind_param("ssss",$username, $password,$name,$email); 	
   	if($stmt->execute()) 	return TRUE;
   	return false;
   	}
 ?>
-
+</body>
+</html>
 
