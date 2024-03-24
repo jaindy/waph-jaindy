@@ -14,18 +14,18 @@
 $username= $_POST["username"];
 $password= $_POST["password"];
 if(isset($username) and isset($password)){
-//echo "change password -> username=$username; password=$password";
-	if (changepassword($username,$password)){
-		echo "Password changed successfully";
+
+	if (chnagepassword($username,$password)){
+		echo "password chnaged success";
 	}else{
-	echo "Change password failed";
+	echo "Failed to change password";
 	}
 }
 else{
 	echo "no username/password provided.";
 }
 	
-  	function changepassword($username, $password) {
+  	function chnagepassword($username, $password) {
   	
 	$mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );
 	
@@ -34,8 +34,8 @@ else{
 	return false;
 	}
   	
-	
-	$prepared_sql="UPDATE account SET password =md5(?) WHERE username=?";
+	//$sql= "SELECT * FROM users WHERE username=? AND password=md5(?)";
+	$prepared_sql="UPDATE account set password=md5(?) where username=?";
   	$stmt=$mysqli->prepare($prepared_sql);
   	$stmt->bind_param("ss",$username, $password); 	
   	if($stmt->execute()) 	return TRUE;
