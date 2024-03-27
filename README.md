@@ -40,6 +40,6 @@ This is a private repository for divyani Jain to store all code from the course.
  - [Individual Project 2](https://github.com/jaindy/waph-jaindy/tree/main/IndividualProjects/IndividualProject02): Registration form
 
 ### Projects
-- [project1] (https://github.com/waph-team15/waph-teamproject): Mini Facebook Web Application
+- [project1](https://github.com/waph-team15/waph-teamproject): Mini Facebook Web Application
 
 >>>>>>> 4687be119c4bf43c8d6b7c73da0d693520fd644c
