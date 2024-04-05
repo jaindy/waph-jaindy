@@ -5,14 +5,14 @@
   </head>
   <body>
   	<?php
-
+session_start();  
   	$lifetime=15*60;
   	$path="/";
   	$domain="waph-team15.minifacebook.com";
   	$secure=TRUE;
   	$httponly=TRUE;
   	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly); 
-  	session_start();    
+  	  
   	
   	$username=$_POST["username"];
   	$password=$_POST["password"];

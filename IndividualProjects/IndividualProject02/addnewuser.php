@@ -5,6 +5,7 @@
   </head>
   <body>
   	<?php
+  	session_start();  
 
   	$lifetime=15*60;
   	$path="/";
@@ -12,7 +13,7 @@
   	$secure=TRUE;
   	$httponly=TRUE;
   	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
-  	session_start();   
+  	 
   	
   	$username= $_POST["username"];
   	$password= $_POST["password"];
@@ -32,7 +33,9 @@
   		}
   	}
   	else{
-  		echo "No username/password provided.";
+  		
+  		echo "<script>alert('No username/password provided');window.location='registrationform.php';</script>";
+  		  		
   		
   	}
   	
