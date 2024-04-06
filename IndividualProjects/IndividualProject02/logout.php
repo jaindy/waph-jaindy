@@ -4,7 +4,10 @@
 	
 ?>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<p>you are logout!
-</p>
+<div class="header">
+<h2 style="text-align: center;">
+you are logout!
+</h2>
 <a href="Loginform.php">login again!</a>
+</div>
 

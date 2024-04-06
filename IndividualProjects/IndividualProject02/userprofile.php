@@ -2,10 +2,15 @@
   <html lang="en">
   <head>
   	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
   </head>
   <body>
+
+
+
   	<?php
-session_start();  
+  
   	$lifetime=15*60;
   	$path="/";
   	$domain="waph-team15.minifacebook.com";
@@ -13,7 +18,7 @@ session_start();
   	$httponly=TRUE;
   	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly); 
   	  
-  	
+  	  session_start();  
   	$username=$_POST["username"];
   	$password=$_POST["password"];
 
@@ -47,7 +52,15 @@ session_start();
   		return false;
   	}
   	?>
-  	<a href="logout.php"> Logout </a>
+  	<div class="header">
+  	<p style="text-align: left;">
+  	Welcome  <?php echo htmlentities($_POST['username']); ?>
+  	</p>
+<a href="editProfile.php"> Manage Profile</a>
+<a href="logout.php">Logout</a>
+
+</div>
+  	
   </body>
   </html>
 
