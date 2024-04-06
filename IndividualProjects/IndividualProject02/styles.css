@@ -130,12 +130,14 @@ form h1 {
 .header{
 background: #fb0;
 height: 200px;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
     text-align: right;
     padding: 73px;
 }
-
+#profile{
+margin:20px;
+}
 .passwordlink{
   font-size: x-large;
     font-weight: bold;
