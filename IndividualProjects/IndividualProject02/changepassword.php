@@ -28,15 +28,38 @@ if(isset($token) or ($token!=$_SESSION["nocsrftoken"])){
 if(isset($username) and isset($password)){
 
 	if (changepassword($username,$password)){
+	$_SESSION['authenticated']=TRUE;
+  	$_SESSION['username']= $_POST["username"];
+  	$_SESSION['browser']=$_SESSION['HTTP_USER_AGENT'];
 
-		echo "password changed success";
+	echo "<script>alert(' Password chnaged successfully');window.location='Loginform.php';</script>";
+
 	}else{
+	session_destroy();
 	echo "Failed to change password";
+	die();
 	}
 }
 else{
-	echo "no username/password provided.";
+echo "<script>alert('No new password provided');window.location='changepasswordform.php';</script>";
+	  		
 }
+
+
+if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
+  		session_destroy();
+  		echo "<script>alert('Please change your password');</script>";
+  		header("Refesh:0; url=changepasswordform.php");
+  		die();
+  	}
+  	if($_SESSION['browser'] !=$_SESSION['HTTP_USER_AGENT']){
+  		session_destroy();
+  		echo "<script>alert('Session hijacking attack is detected!');</script>";
+  		header("Refesh:0; url=changepasswordform.php");
+  		die();
+  		
+  	}
+
 
   	function changepassword($username, $password) {
   	
@@ -56,7 +79,7 @@ $mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );
 
 ?>
 <div class="header">
-  	<p style="text-align: left;">Password changed successfully</p>
+  	
 <a href="Loginform.php"> Login </a>
 </div>
 </body>

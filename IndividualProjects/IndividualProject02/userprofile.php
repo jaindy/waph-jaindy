@@ -7,7 +7,7 @@
   </head>
   <body>
 
-  	<?php
+ <?php
   	$lifetime=15*60;
   	$path="/";
   	$domain="192.168.56.101";
@@ -25,7 +25,16 @@ if (checklogin_mysql($username,$password)) {
 		$_SESSION['authenticated']=TRUE;
 		$_SESSION['username']= $_POST["username"];
 		$_SESSION['browser']=$_SESSION['HTTP_USER_AGENT'];
-	}else{
+?>
+
+	<div class="header">
+  	<p style="text-align: left;"> Welcome <?php echo htmlentities($_POST['username']); ?> !</p>
+		<a href="editProfile.php"> Manage Profile</a>
+		<a href="logout.php">Logout</a>
+
+	</div>
+		
+	<?php	}else{
 		session_destroy();
 		echo "<script>alert('Invalid username/password');window.location='Loginform.php';</script>";
 		die();
@@ -67,14 +76,7 @@ if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
   		return false;
   	}
   	?>
-  	<div class="header">
-  	<p style="text-align: left;">
-  	Welcome  echo "<?php echo htmlentities($_POST['username']); ?>";
-  	</p>
-<a href="editProfile.php"> Manage Profile</a>
-<a href="logout.php">Logout</a>
-
-</div>
+  
   	
   </body>
   </html>

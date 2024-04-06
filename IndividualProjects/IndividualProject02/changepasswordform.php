@@ -37,3 +37,12 @@
 
 </body>
 </html>
+
+
+<?php
+ 
+  $rand = bin2hex(openssl_random_pseudo_bytes(16));
+  $_SESSION['nocsrftoken'] = $rand;
+
+?>
+

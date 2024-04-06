@@ -28,6 +28,8 @@
   			$_SESSION['username']= $_POST["username"];
   			$_SESSION['browser']=$_SESSION['HTTP_USER_AGENT'];
   			echo "Congratulations! you have sucessfully registered in the system";
+  			echo "<script>alert('Congratulations! you have sucessfully registered in the system');window.location='Loginform.php';</script>";
+
   		}else{
   			session_destroy();
   			echo "Registration failed! please try again.";
@@ -72,10 +74,7 @@
   	}
   	?>
   	<br/>
-    <div class="header">
-      <p style="text-align: left;">>You have been sucessfully registered!</p>
-  	<a href='Loginform.php'>Login</a>
-  </div>
+
   </body>
   </html>
 
