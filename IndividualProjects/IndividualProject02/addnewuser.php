@@ -2,19 +2,21 @@
   <html lang="en">
   <head>
   	<meta charset="utf-8">
+     <link rel="stylesheet" type="text/css" href="styles.css">
+
   </head>
   <body>
   	<?php
-  	session_start();  
+ 
 
   	$lifetime=15*60;
   	$path="/";
-  	$domain="waph-team15.minifacebook.com";
+    $domain="192.168.56.101";
   	$secure=TRUE;
   	$httponly=TRUE;
   	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
+    session_start();  
   	 
-  	
   	$username= $_POST["username"];
   	$password= $_POST["password"];
   	$name= $_POST["name"];
@@ -39,7 +41,7 @@
   		
   	}
   	
-  	if(!isset($_SESSION['authenticated']) and $_SESSION['authenticated'] !=TRUE){
+  	if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
   		session_destroy();
   		echo "<script>alert('You are not registered. Please registered again');</script>";
   		header("Refesh:0; url=registrationform.php");
@@ -55,14 +57,14 @@
   	
   	function addnewuser($username, $password,$name,$email) {
   		
-  		$mysqli = new mysqli('localhost','waphteam15','123456' ,'WAPH_TEAM' );
+  		    $mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );
   		
   		if($mysqli->connect_errno){
   			printf("DB connection failed",$mysqli->connect_error);
   			return false;
   		}
   		
-  		$prepared_sql="INSERT INTO users (username,password,name,email)Values(?,md5(?),?,?)";
+  		$prepared_sql="INSERT INTO account (username,password,name,email)Values(?,md5(?),?,?)";
   		$stmt=$mysqli->prepare($prepared_sql);
   		$stmt->bind_param("ssss",$username, $password,$name,$email); 	
   		if($stmt->execute()) 	return TRUE;
@@ -70,7 +72,10 @@
   	}
   	?>
   	<br/>
+    <div class="header">
+      <p style="text-align: left;">>You have been sucessfully registered!</p>
   	<a href='Loginform.php'>Login</a>
+  </div>
   </body>
   </html>
 

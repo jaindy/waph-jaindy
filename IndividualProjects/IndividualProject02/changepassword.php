@@ -2,13 +2,22 @@
  <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
 <?php
+
+  	$lifetime=15*60;
+  	$path="/";
+  	$domain="192.168.56.101";
+  	$secure=TRUE;
+  	$httponly=TRUE;
+  	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly); 
+  	  
+  	session_start();  
 $username= $_POST["username"];
 $password= $_POST["password"];
-
-
 $token=$_POST['nocsrftoken'];
 
 if(isset($token) or ($token!=$_SESSION["nocsrftoken"])){
@@ -31,15 +40,14 @@ else{
 
   	function changepassword($username, $password) {
   	
-	$mysqli = new mysqli('localhost','waphteam15','123456' ,'WAPH_TEAM' );
+$mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );
 	
 	if($mysqli->connect_errno){
 	printf("DB connection failed",$mysqli->connect_error);
 	return false;
 	}
-  	
-	//$sql= "SELECT * FROM users WHERE username=? AND password=md5(?)";
-	$prepared_sql="UPDATE users set password=md5(?) where username=?;";
+  
+	$prepared_sql="UPDATE account set password=md5(?) where username=?;";
   	$stmt=$mysqli->prepare($prepared_sql);
   	$stmt->bind_param("ss", $password,$username); 	
   	if($stmt->execute()) 	return TRUE;
@@ -47,7 +55,9 @@ else{
   	}
 
 ?>
-
+<div class="header">
+  	<p style="text-align: left;">Password changed successfully</p>
 <a href="Loginform.php"> Login </a>
+</div>
 </body>
 </html>
