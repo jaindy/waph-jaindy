@@ -5,9 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
- 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-    </script>
+
     <script>
      function editprofile() {
         var myprofile = document.getElementById("myprofile");
@@ -43,7 +41,7 @@ if (checklogin_mysql($username,$password)) {
 
 ?>
 	<div class="header">
-  	<p style="text-align: left;"> Welcome <?php echo htmlentities($_POST['username']); ?> !</p>	
+  	<p style="text-align: left;"> Welcome <?php echo htmlentities($_POST['username']); ?> </p>	
 		<a href="#myprofile" id="profile" onclick="editprofile()"> Edit Profile</a>
 		<a href="Loginform.php">Logout</a>
 
@@ -86,19 +84,56 @@ if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
   		$stmt->bind_param("ss",$username, $password);
   		$stmt->execute();
   		$result=$stmt->get_result();
-  		while ($row = $result->fetch_assoc()) {
-  		  echo "Name: " .$row['name']."</br>";
-  		  echo "Email: ".$row['email'];
-}
-  
-  		if($result->num_rows ==1)
+  		$row = $result->fetch_assoc();
+  		
+  	
+    		if($result->num_rows ==1)
   			return TRUE;
   		return false;			
   	}
   	?>
-   
+ <?php
+  	$lifetime=15*60;
+  	$path="/";
+  	$domain="192.168.56.101";
+  	$secure=TRUE;
+  	$httponly=TRUE;
+  	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly); 
+ 	session_start();  
+
+	$mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );  
+  	if($mysqli->connect_errno){
+  		printf("DB connection failed",$mysqli->connect_error);
+  		exit();
+	}  		
+
+$username = $_POST["username"];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $username = $_POST["username"];
+    $query = "UPDATE account SET name = ?, email = ? WHERE username = ?";
+    $stmt = $mysqli->prepare($query);
+    $stmt->bind_param('sss', $name, $email, $username);
+    $stmt->execute();
+    echo "<script>alert('successfully updated');window.location='userprofile.php';</script>";
+    session_start();
+
+}
+
+$query = "SELECT * FROM account WHERE username = ?";
+$stmt = $mysqli->prepare($query);
+$stmt->bind_param('s', $username);
+$stmt->execute();
+
+$result = $stmt->get_result();
+$currentSettings = $result->fetch_assoc();
+
+		
+?>
   
-    <!-- Myprofile-->
+  <!-- Myprofile-->
     <section class="resume-section" id="myprofile" style="display:None">
       <div>
         
@@ -106,16 +141,15 @@ if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
       <h1 id="litheader">Edit Information</h1>
       <div class="inset">
           <p>
-          <input type="text" class="text_field" name="username" placeholder="Enter username" required>
+          <input type="text" class="text_field" name="username" placeholder="Enter username" hidden value="<?= $currentSettings['username'] ?>">
         </p>
         <p>
-          <input type="text" class="text_field" name="name" placeholder="Enter full name" required>
+          <input type="text" class="text_field" name="name" placeholder="Enter full name" value="<?= $currentSettings['name'] ?>" required>
         </p>
 
        <p>
-         <input type="text" class="text_field" name="email" required
-         pattern="^[\w.-]+@[\w-]+(.[\w-]+)*$" title="Enter a valid email"
-         placeholder="Enter a valid email" onchange="this.setCustomValidity(this.validity.patternMismatch?this.title: '');"/><br>
+         <input type="text" class="text_field" name="email" value="<?= $currentSettings['email'] ?>" 
+         title="Enter a valid email"  placeholder="Enter a valid email" required/><br>
        </p>
 
      </div>
@@ -125,38 +159,7 @@ if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
    </form>
       </div>
     </section>
-  
-  <?php
-
-if(isset($_POST['update'])){
-
-  if(editprofile($_POST["name"], $_POST["email"],$_POST["username"])){
- echo "<script>alert('profile updated');</script>";
-    }else{
-    session_destroy();
-    echo "<script>alert('Invalid name/email')</script>";
-    die();
-}}
-
-  function editprofile($name, $email,$username) {
-
-      $mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );
-   
-      if($mysqli->connect_errno){
-        printf("DB connection failed",$mysqli->connect_error);
-        exit();
-      }
-      
-      $sql= "UPDATE account set name=?, email=? WHERE username=?";
-      $stmt=$mysqli->prepare($sql);
-      $stmt->bind_param("sss",$name, $email,$username);
-
-      if($stmt->execute())  return TRUE;
-    return false;
-   
-    }
-  ?>
- 
+    
 
 </body>
 </html>
