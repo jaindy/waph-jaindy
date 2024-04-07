@@ -29,6 +29,7 @@
   	session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly); 
   	  
   	session_start();  
+  	$_SESSION['username'] = $_POST['username'];
   	$username=$_POST["username"];
   	$password=$_POST["password"];
 
@@ -39,14 +40,7 @@ if (checklogin_mysql($username,$password)) {
 		$_SESSION['username']= $_POST["username"];
 		$_SESSION['browser']=$_SESSION['HTTP_USER_AGENT'];
 
-?>
-	<div class="header">
-  	<p style="text-align: left;"> Welcome <?php echo htmlentities($_POST['username']); ?> </p>	
-		<a href="#myprofile" id="profile" onclick="editprofile()"> Edit Profile</a>
-		<a href="Loginform.php">Logout</a>
-
-	</div>
-		
+?>	
 	<?php	
 			
 	}else{
@@ -84,9 +78,7 @@ if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
   		$stmt->bind_param("ss",$username, $password);
   		$stmt->execute();
   		$result=$stmt->get_result();
-  		$row = $result->fetch_assoc();
-  		
-  	
+  
     		if($result->num_rows ==1)
   			return TRUE;
   		return false;			
@@ -107,48 +99,54 @@ if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
   		exit();
 	}  		
 
-$username = $_POST["username"];
+$username = $_SESSION['username'];
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
-    $username = $_POST["username"];
+
     $query = "UPDATE account SET name = ?, email = ? WHERE username = ?";
     $stmt = $mysqli->prepare($query);
     $stmt->bind_param('sss', $name, $email, $username);
     $stmt->execute();
-    echo "<script>alert('successfully updated');window.location='userprofile.php';</script>";
-    session_start();
-
+ echo "<script>alert('updated done');</script>";
+    header("url=userprofile.php");
+    
+	
 }
 
 $query = "SELECT * FROM account WHERE username = ?";
 $stmt = $mysqli->prepare($query);
 $stmt->bind_param('s', $username);
 $stmt->execute();
-
 $result = $stmt->get_result();
-$currentSettings = $result->fetch_assoc();
-
-		
+$currentData = $result->fetch_assoc();
+	
 ?>
-  
+  <div class="header">
+  	<p style="text-align: left;"> Welcome <?php echo htmlentities($_POST['username']); ?> </p>	
+		<a href="#myprofile" id="profile" onclick="editprofile()"> Edit Profile</a>
+
+		<a href="Loginform.php">Logout</a>
+
+	</div>
   <!-- Myprofile-->
     <section class="resume-section" id="myprofile" style="display:None">
       <div>
         
-    <form id="accesspanel" method="post">
+    <form id="accesspanel" method="post" action="userprofile.php">
       <h1 id="litheader">Edit Information</h1>
       <div class="inset">
           <p>
-          <input type="text" class="text_field" name="username" placeholder="Enter username" hidden value="<?= $currentSettings['username'] ?>">
+          <input type="text" class="text_field" name="username" placeholder="Enter username" hidden value="<?= $currentData['username'] ?>">
         </p>
         <p>
-          <input type="text" class="text_field" name="name" placeholder="Enter full name" value="<?= $currentSettings['name'] ?>" required>
+          <input type="text" class="text_field" name="name" placeholder="Enter full name" value="<?= $currentData['name'] ?>" required>
         </p>
 
        <p>
-         <input type="text" class="text_field" name="email" value="<?= $currentSettings['email'] ?>" 
+         <input type="text" class="text_field" name="email" value="<?= $currentData['email'] ?>" 
          title="Enter a valid email"  placeholder="Enter a valid email" required/><br>
        </p>
 
@@ -159,7 +157,6 @@ $currentSettings = $result->fetch_assoc();
    </form>
       </div>
     </section>
-    
 
 </body>
 </html>
