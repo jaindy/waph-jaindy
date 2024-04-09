@@ -130,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
 
 
 } 
-
+/*
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 
@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
   echo "<script>alert('Password updated');</script>";
   header("url=userprofile.php");
 
-} 
+} */
 
 $query = "SELECT * FROM account WHERE username = ?";
 $stmt = $mysqli->prepare($query);
