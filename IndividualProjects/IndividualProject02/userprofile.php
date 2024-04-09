@@ -64,7 +64,8 @@ function resetpassword() {
 if(!isset($_SESSION['authenticated']) AND $_SESSION['authenticated'] !=TRUE){
   session_destroy();
   echo "<script>alert('You are not login. Please login again');</script>";
-  header("Refesh:0; url=Loginform.php");
+ // header("Refesh:0; url=Loginform.php");
+  header("location:/Loginform.php"); 
   die();
 }
 if($_SESSION['browser'] !=$_SESSION['HTTP_USER_AGENT']){
@@ -134,7 +135,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 
 
-  
   $query="UPDATE account set password=md5(?) where username=?;";
   
   $stmt = $mysqli->prepare($query);
@@ -183,7 +183,7 @@ $currentData = $result->fetch_assoc();
 
      </div>
      <p class="p-container">
-      <input type="submit" name="update" id="go" value="Update">
+      <input type="submit" name="update" value="Update">
     </p>
   </form>
 </div>
@@ -209,7 +209,7 @@ $currentData = $result->fetch_assoc();
       placeholder="Retype your password" required title="Password does not match"
       onchange="this.setCustomValidity(this.validity.patternMismatch?this.title: '');"/> <br>
     </p>
-</div>
+     </div>
  
     <p class="p-container">
       <input type="submit" name="reset" id="go" value="Submit">
@@ -219,8 +219,8 @@ $currentData = $result->fetch_assoc();
 
 </section>
 
-</body>
-</html>
+
 
 </body>
 </html>
+
