@@ -38,9 +38,9 @@ This is a private repository for divyani Jain to store all code from the course.
 ### Individual Projects
 
  - [Individual Project 1](https://github.com/jaindy/jaindy-uc.github.io): Front-end Web Development with Professional profile website on github.io website
- - [Individual Project 2](https://github.com/jaindy/waph-jaindy/tree/main/IndividualProjects/IndividualProject02): Registration form
+ - [Individual Project 2](https://github.com/jaindy/waph-jaindy/tree/main/IndividualProjects/IndividualProject02): Full stack web development
 
-### Projects
-- [project1](https://github.com/waph-team15/waph-teamproject): Mini Facebook Web Application
+### Team Projects
+- [Project1](https://github.com/waph-team15/waph-teamproject): Mini Facebook Web Application
 
 >>>>>>> 4687be119c4bf43c8d6b7c73da0d693520fd644c
