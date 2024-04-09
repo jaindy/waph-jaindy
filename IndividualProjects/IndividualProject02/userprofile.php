@@ -29,11 +29,10 @@ function resetpassword() {
 
 </head>
 <body>
- 
+
 
  <?php
- 
- 
+  
  $lifetime=15*60;
  $path="/";
  $domain="192.168.56.101";
@@ -42,6 +41,7 @@ function resetpassword() {
  session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly); 
 
  session_start();  
+
  $_SESSION['username'] = $_POST['username'];
  $username=$_POST["username"];
  $password=$_POST["password"];
@@ -106,6 +106,7 @@ $httponly=TRUE;
 session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly); 
 session_start();  
 
+   
 $mysqli = new mysqli('localhost','jaindy','#nanuDJ2024' ,'waph' );  
 if($mysqli->connect_errno){
   printf("DB connection failed",$mysqli->connect_error);
@@ -128,7 +129,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
 
 
 } 
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+
+
+  
   $query="UPDATE account set password=md5(?) where username=?;";
   
   $stmt = $mysqli->prepare($query);
@@ -153,7 +159,7 @@ $currentData = $result->fetch_assoc();
 
  <a href="#myprofile" id="profile" onclick="editprofile()"> Edit Profile</a>
 
- <a href="Loginform.php">Logout</a>
+ <a href="logout.php">Logout</a>
 
 </div>
 <!-- Myprofile-->
@@ -204,7 +210,7 @@ $currentData = $result->fetch_assoc();
       onchange="this.setCustomValidity(this.validity.patternMismatch?this.title: '');"/> <br>
     </p>
 </div>
-   
+ 
     <p class="p-container">
       <input type="submit" name="reset" id="go" value="Submit">
     </p>
@@ -213,10 +219,8 @@ $currentData = $result->fetch_assoc();
 
 </section>
 
-
 </body>
 </html>
 
 </body>
 </html>
-

@@ -1,13 +1,6 @@
-<?php
-	session_start();
-	session_destroy();
-	
+<?php   
+session_start(); //to ensure you are using same session
+session_destroy(); //destroy the session
+header("location:/Loginform.php"); //to redirect back to "index.php" after logging out
+exit();
 ?>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<div class="header">
-<h2 style="text-align: center;">
-you are logout!
-</h2>
-<a href="Loginform.php">login again!</a>
-</div>
-
