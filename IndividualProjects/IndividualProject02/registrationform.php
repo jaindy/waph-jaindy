@@ -17,11 +17,11 @@
           <input type="text" class="text_field" name="name" placeholder="Enter full name" required>
         </p>
         <p>
-         <input type="text" class="text_field" name="username" placeholder="Enter username"  required>
+         <input type="text" class="text_field" name="username"  pattern="\w+" placeholder="Enter username"  required>
        </p>
        <p>
          <input type="text" class="text_field" name="email" required
-         pattern="^[\w.-]+@[\w-]+(.[\w-]+)*$" title="Enter a valid email"
+         pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Enter a valid email"
          placeholder="Enter a valid email" onchange="this.setCustomValidity(this.validity.patternMismatch?this.title: '');"/><br>
        </p>
        <p>

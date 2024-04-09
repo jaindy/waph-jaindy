@@ -25,9 +25,7 @@
     <p class="p-container">
       <input type="submit" name="Login" id="go" value="Login">
     </p>
-    <p class="passwordlink">
-      <a href="changepasswordform.php">Forgot password</a>
-    </p>
+  
   </form>
 
 

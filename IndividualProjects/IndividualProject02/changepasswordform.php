@@ -8,14 +8,14 @@
 <body>
 
 <div class="header">
-<a href='Loginform.php'> Login</a>
+
 </div>
 
   <form action="changepassword.php" method="POST" class="form login">
     <h1>Change password form, WAPH</h1>
     <div class="inset">
    <p>
-    <input type="text" class="text_field" name="username" placeholder="Enter username" /> <br>
+    <input type="text" class="text_field" name="username" placeholder="Enter username"/> <br>
    </p>
    <p><input type="password" name="password" required
       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&])[\w!@#$%^&]{8,}$"
@@ -35,14 +35,15 @@
    </form>
 
 
-</body>
-</html>
 
 
 <?php
  
+
   $rand = bin2hex(openssl_random_pseudo_bytes(16));
   $_SESSION['nocsrftoken'] = $rand;
 
 ?>
 
+</body>
+</html>
