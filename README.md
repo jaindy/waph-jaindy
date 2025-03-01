@@ -35,7 +35,7 @@ This is a private repository for divyani Jain to store all code from the course.
 
 ### Individual Projects
 
- - [Individual Project 1](https://github.com/jaindy/jaindy-uc.github.io): Front-end Web Development with Professional profile website on github.io website
+ - [Individual Project 1](https://github.com/jaindy/waph-jaindy/tree/main/IndividualProjects/IndividualProject01): Front-end Web Development 
  - [Individual Project 2](https://github.com/jaindy/waph-jaindy/tree/main/IndividualProjects/IndividualProject02): Full stack web development
 
 ### Team Projects
